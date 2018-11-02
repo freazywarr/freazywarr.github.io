@@ -1,0 +1,38 @@
+body {
+    background-color:#1F7592;
+}
+	
+/*#siteLogo {
+	background-image: url("logoHollow.png");
+	height: 100px;
+}	-*/
+
+.siteLogo {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100px;
+	height: 100px;
+	background-image: url("logoHollow.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.siteLogo:hover{
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+	width: 200px;
+	height: 200px;
+	background-image: url("logoHollow.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+/*
+	width: 100px;
+	height: 100px;
+	background-image: url("logoHollow.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+*/
