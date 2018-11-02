@@ -1,35 +1,26 @@
 body {
     background-color:#1F7592;
+	margin: 0;
+	padding: 0;
 }
 	
-/*#siteLogo {
-	background-image: url("logoHollow.png");
-	height: 100px;
-}	-*/
-/*
 .siteLogo {
-	background-image: url("logoWithText.png");
-	height: 10vh; 
-	background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
-
-.siteLogo {
+	position: fixed;
 	display: table;
 	margin-right: auto;
 	margin-left: auto;
 	width: 100%;
 	height: 25vh;
 	text-align: center;
+	border-bottom: 0.2vw solid black;
 	background-image: url("logoWithText.png");
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	background-position: center;
-	/*border: 3px solid #73AD21;*/
 }
 
 .siteLogo:hover{
+	position: fixed;
 	display: table;
 	margin-right: auto;
 	margin-left: auto;
@@ -42,33 +33,110 @@ body {
 	background-position: center;
 	filter: brightness(112%)
 }
-/*.siteLogo {
-	display: table;
-	margin-right: auto;
-	margin-left: auto;
-	width: 500px;
-	height: 100px;
-	background-image: url("logoWithText.png");
-	background-repeat: no-repeat;
-	background-size: contain;
+
+.navigationContainer{
+	top: 25vh;
+	padding-top: 25vh;
+	border-bottom: 0.2vw solid black;
+	width: 100%;
+	height: 10vh;
+	background-color: #ffffff;
+	margin: 0;
 }
 
-.siteLogo:hover{
-	display: table;
-	margin-right: auto;
-	margin-left: auto;
-	width: 100%;
-	height: 100px;
-	background-image: url("logoWithText.png");
-	background-repeat: no-repeat;
-	background-size: contain;
-	filter: brightness(120%)
+.navigation-1{
+	width: 25%;
+	float: left;
+	height: 10vh;
+	/*color: black;
+	text-align: center;
+	font-family: verdana;*/
+	background-color: blue;
+}
+
+.navigation-1:hover{
+	width: 25%;
+	float: left;
+	height: 10vh;
+	background-color: red;
+}
+
+.navigation-2{
+	width: 25%;
+	float: left;
+	height: 10vh;
+	background-color: blue;
+}
+
+.navigation-2:hover{
+	width: 25%;
+	float: left;
+	height: 10vh;
+	background-color: red;
+}
+.navigation-3{
+	width: 25%;
+	float: left;
+	height: 10vh;
+	background-color: blue;
+}
+
+.navigation-3:hover{
+	width: 25%;
+	float: left;
+	height: 10vh;
+	background-color: red;
+}
+
+.navigation-4{
+	width: 25%;
+	float: left;
+	height: 10vh;
+	background-color: blue;
+}
+
+.navigation-4:hover{
+	width: 25%;
+	float: left;
+	height: 10vh;
+	background-color: red;
+}
+
+.navigation-text{
+	font-family: verdana;
+	font-size: 3.5vw;
+	color: black;
+	text-align: center;
 }
 /*
-	width: 100px;
-	height: 100px;
-	background-image: url("logoHollow.png");
-	background-repeat: no-repeat;
-	background-size: contain;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
-*/
+
+li {
+    float: left;
+	width: 20vh;
+	font-family: Verdana;
+	font-size: 2vw;
+
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+	height: 4vh;
+    padding: 2vh 5vh;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: red;
