@@ -6,13 +6,21 @@ body {
 	background-image: url("logoHollow.png");
 	height: 100px;
 }	-*/
+/*
+.siteLogo {
+	background-image: url("logoWithText.png");
+	height: 10vh; 
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
 
 .siteLogo {
 	display: table;
 	margin-right: auto;
 	margin-left: auto;
 	width: 100%;
-	height: 250px;
+	height: 25vh;
 	text-align: center;
 	background-image: url("logoWithText.png");
 	background-repeat: no-repeat;
@@ -26,7 +34,7 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	width: 100%;
-	height: 250px;
+	height: 25vh;
 	text-align: center;
 	background-image: url("logoWithText.png");
 	background-repeat: no-repeat;
