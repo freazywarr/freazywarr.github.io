@@ -26,11 +26,33 @@
 		filter: brightness(112%)
 	}
 	
+	.portfolio {
+		border-radius: 25px;
+		background: #4298B5;
+		font-family: verdana;
+		font-size: 2vw;
+		padding: 1vw;
+		margin: 1vw;
+		height: 15vw;
+		color: black;
+	}
+	
+	.portfolio:hover {
+		filter: brightness(112%)
+	}
+	
 	.videoGames {
 		background-color: #27251F;
 		color: #D9D9D6;
 		padding: 5px;
 		margin: 5px;
+	}
+	
+	h2 {
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		font-size: 2vw;
 	}
 	</style>
 </head>
@@ -39,12 +61,27 @@
 	<header>
 		<a href="index.html"><img src="siteStyles/logoWithText.png" style="width:100%;"></a>
 	</header>
-
-
-	<div class="videoGames">
-		<h2>Barren London</h2>
-		<p>Barren London is an isometric RPG set in the irrardiated wasteland of London.</p>
+	
+	<a href="cyanpy.html" style="text-decoration:none">
+	<div class="portfolio">
+		<h2>cyanpy</h2>
+		<p><img src="siteStyles/logoHollow.png" align="left" style="height:10vw;">
+		cyanpy is a library of functions and classes for use with PyGame. Click this box to see the full documentation.
+		</p>
+		</div>
 	</div>
+	</a>
+	
+	<a href="http://www.youtube.com/cyansheepmedia" style="text-decoration:none">
+	<div class="portfolio">
+		<h2>YouTube</h2>
+		<p><img src="siteStyles/logoHollow.png" align="left" style="height:10vw;">
+		You can find a number of videos on the CyanSheepMedia YouTube channel.
+		The main topics of these videos are on programming in Python, 3D rendering, and building LEGO models.
+		</p>
+		</div>
+	</div>
+
 
 </body>
 </html> 
