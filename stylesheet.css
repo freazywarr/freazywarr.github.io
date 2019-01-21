@@ -1,0 +1,129 @@
+body { margin: 5%; margin-top: 0%; padding: 0; background-color: #27251F; }
+hr {width: 50%; }
+	
+.fullHeader {
+	font-family: "Times New Roman", Times, serif; 
+	font-size: 150px; 
+	color: #D9D9D6;
+	text-align: center;
+}
+
+.fullHeader a{
+	text-decoration: none; 
+	color: #D9D9D6;
+}
+
+.fullHeader:hover a{
+	text-align: center; 
+	color: #9EA2A2;
+}
+
+.smallHeader {
+	font-family: "Times New Roman", Times, serif; 
+	font-size: 100px; 
+	color: #D9D9D6;
+	text-align: center;
+}
+
+.smallHeader a{
+	text-decoration: none; 
+	color: #D9D9D6;
+}
+
+.smallHeader:hover a{
+	text-align: center; 
+	color: #9EA2A2;
+}
+
+.index {
+	font-family: "Times New Roman", Times, serif;
+	line-height: 26px;
+}
+	
+.index h2 {
+	font-size: 40px;
+	color: #D9D9D6;
+	text-align: center;
+}
+		
+.index a {
+	font-size: 30px; 
+	text-decoration: none;
+	color: #6CACE4; 
+	text-align: left; 
+	text-indent: 2em; 
+	margin-left: 8%;
+}
+		
+.index a:visited {
+	color: #307FE2;
+}
+		
+.index a:hover {
+	color: #B5BD00;
+}
+
+.index a:active { 
+	color: #737B4C;
+}
+		
+.index p {
+	font-size: 25px; 
+	color: #D9D9D6; 
+	text-align: left; 
+	text-indent: 4em; 
+	margin-left: 10%;
+}
+
+.textBox {
+	font-family: "Times New Roman", Times, serif; 
+	color: #D9D9D6;
+	line-height: 2em;
+}
+
+.textBox h2 {
+	font-size: 40px; 
+	text-align: center; 
+	text-indent: 1em; 
+}
+	
+.textBox p {
+	font-size: 30px; 
+	text-align: center; 
+	text-indent: 1em;
+}
+		
+@media screen and (max-width: 800px) {
+	.fullHeader { 
+		font-size: 15vw;
+	}
+	
+	.smallHeader { 
+		font-size: 15vw;
+	}
+			
+	br {
+		line-height: 1vw;
+	}
+	
+	.index {
+		line-height: 5vw;
+		}
+		
+	.index h2 {
+		font-size: 8vw;
+	}
+			
+	.index a {
+		font-size: 6vw; 
+		text-indent: 2vw; 
+		margin-left: 0vw;
+	}
+			
+	.index p {
+		font-size: 5.5vw;  
+		text-indent: 13vw; 
+		margin-left: 1vw;
+	}
+}
+		
