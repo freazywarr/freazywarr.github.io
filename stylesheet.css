@@ -76,21 +76,21 @@ hr {width: 50%; }
 }
 
 .textBox {
-	font-family: "Times New Roman", Times, serif; 
-	color: #D9D9D6;
-	line-height: 2em;
+	font-family: "Times New Roman", Times, serif;
+	line-height: 26px;
 }
 
 .textBox h2 {
-	font-size: 40px; 
-	text-align: center; 
-	text-indent: 1em; 
+	font-size: 40px;
+	color: #D9D9D6;
+	text-align: center;
 }
 	
 .textBox p {
-	font-size: 30px; 
-	text-align: center; 
-	text-indent: 1em;
+	font-size: 25px; 
+	color: #D9D9D6; 
+	text-align: left; 
+	margin-left: 10%;
 }
 		
 @media screen and (max-width: 800px) {
@@ -107,7 +107,7 @@ hr {width: 50%; }
 	}
 	
 	.index {
-		line-height: 5vw;
+		line-height: 6vw;
 		}
 		
 	.index h2 {
@@ -125,5 +125,19 @@ hr {width: 50%; }
 		text-indent: 13vw; 
 		margin-left: 1vw;
 	}
+	
+	.textBox {
+		line-height: 6vw;
+		}
+		
+	.textBox h2 {
+		font-size: 8vw;
+	}
+					
+	.textBox p {
+		font-size: 5.5vw;  
+		margin-left: 1vw;
+	}
+	
 }
 		
