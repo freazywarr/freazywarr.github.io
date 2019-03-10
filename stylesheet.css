@@ -90,7 +90,8 @@ hr {width: 50%; }
 	font-size: 25px; 
 	color: #D9D9D6; 
 	text-align: left; 
-	margin-left: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .textBox table {
@@ -108,6 +109,23 @@ hr {width: 50%; }
 	text-align: center;
 	width: 400px;
 	height: 40px
+}
+
+.textBox a {
+	text-decoration: none;
+	color: #6CACE4;   
+}
+		
+.textBox a:visited {
+	color: #307FE2;
+}
+		
+.textBox a:hover {
+	color: #B5BD00;
+}
+
+.textBox a:active { 
+	color: #737B4C;
 }
 
 .textBox td {
@@ -165,6 +183,7 @@ img {
 	.textBox p {
 		font-size: 5.5vw;  
 		margin-left: 1vw;
+		margin-right: 1vw;
 	}
 	
 	.textBox table {
