@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Emily Warr - Documentation</title>
+	<title>Emily Warr - Star Trek Episodic Analysis</title>
 	
-	<meta name="description" content="All of the public documentation for the various projects I've worked on.">
-	<meta name="keywords" content="documentation">
+	<meta name="description" content="An analysis of every episode of Star Trek. From TOS to DIS.">
+	<meta name="keywords" content="analysis">
 	<meta name="author" content="Emily Warr">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="LCARSstylesheet.css">
@@ -24,41 +24,115 @@
 		</div>
 	</div>
 	
-	<div class='bottomDisplay'>
-		<div class='indexButtonContainer'>
+	<div class="bottomDisplay">
+		<div class="indexButtonContainer">
 			<img src="indexButtonContainer.png" alt="indexButton">
-			<div class='indexButton'>
+			<div class="indexButton">
 				<a href="index.html"><img src="indexButton.png" alt="Return to Main Site"></a>
 			</div>
 		</div>
 		
-		<div class='folioList'>
-			<a href="index.html"><img src="tosButton.png" alt="TOS"></a>
-			<a href="index.html"><img src="tasButton.png" alt="TAS"></a>
-			<a href="index.html"><img src="tngButton.png" alt="TNG"></a>
-			<a href="index.html"><img src="ds9Button.png" alt="DS9"></a>
-			<a href="index.html"><img src="voyButton.png" alt="VOY"></a>
-			<a href="index.html"><img src="entButton.png" alt="ENT"></a>
-			<a href="index.html"><img src="disButton.png" alt="DIS"></a>
-			<a href="index.html"><img src="filmsButton.png" alt="FILMS"></a>
-			<a href="index.html"><img src="phase2Button.png" alt="PHASE II"></a>
-			<a href="index.html"><img src="continuesButton.png" alt="CONTINUES"></a>
+		<div class="folioButtons">
+			<button class="button" id="" onclick="groupSearch(this.id)"><p>ALL</p></button>
+			<button class="button" onclick="groupSearch('TOS')"><p>TOS</p></button>
+			<button class="button" onclick="groupSearch('TAS')"><p>TAS</p></button>
+			<button class="button" onclick="groupSearch('TNG')"><p>TNG</p></button>
+			<button class="button" onclick="groupSearch('DS9')"><p>DS9</p></button>
+			<button class="button" onclick="groupSearch('VOY')"><p>VOY</p></button>
+			<button class="button" onclick="groupSearch('ENT')"><p>ENT</p></button>
+			<button class="button" onclick="groupSearch('DIS')"><p>DIS</p></button>
+			<button class="button" onclick="groupSearch('FILMS')"><p>FILMS</p></button>
+			<button class="button" onclick="groupSearch('PHASE II')"><p>PHASE II</p></button>
+			<button class="button" onclick="groupSearch('CONTINUES')"><p>CONTINUES</p></button>
 			<img src="folioEnd.png" alt="folioEnd">
 		</div>
-		<div class='folioContent'>
-			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+		<div class="folioList">
+			<input type="text" id="tagSearch" onkeyup="tagSearch()" placeholder="Search for tags." title="Try 'LGBT' or 'feminism'.">
 		
-			<ul id='episodes'>
-				<li>TOS</li>
-				<li>TAS</li>
-				<li>TNG</li>
-				<li>DS9</li>
-				<li>VOY</li>
-				<li>ENT</li>
-			</ul>
+			<div class="folioContent">
+				<div class="folioContentGroup">
+					TOS
+				</div>
+				<div class="folioContentTags">
+					feminism, queertheory, lgbt, fascism
+				</div>
+			</div>
+	
+			<div class="folioContent">
+				<div class="folioContentGroup">
+					TNG
+				</div>
+				<div class="folioContentTags">
+					feminism, queertheory, lgbt
+				</div>
+			</div>
+	
+			<div class="folioContent">
+				<div class="folioContentGroup">
+					TNG
+				</div>
+				<div class="folioContentTags">
+					war, fascism, lgbt
+				</div>
+			</div>
 		
 		</div>
 	</div>
+<script>
+var activeGroup, activeTags;
+activeGroup = [""];
+activeTags = [""];
 
+function groupSearch(userInput) {
+	activeGroup = userInput;
+	var folioList, folioContent, count, tagName, groupName, testVar;
+	
+	folioList = document.getElementsByClassName("folioList");
+	
+	folioContent = document.getElementsByClassName("folioContent");
+	
+	for (count = 0; count < folioContent.length; count++) {
+		tagName = folioContent[count].getElementsByClassName("folioContentTags")[0].innerHTML;
+		groupName = folioContent[count].getElementsByClassName("folioContentGroup")[0].innerHTML;
+		
+		if (groupName.indexOf(userInput) > -1 && tagName.toUpperCase().indexOf(activeTags) > -1) {
+			folioContent[count].style.display = "";
+		} else {
+			folioContent[count].style.display = "none";
+		}
+	}
+}
+
+function tagSearch() {
+	var rawInput, userInput, folioList, folioContent, hasAllTags, folioContentView, folioContentLength, countTags, count, tagName, groupName, biggerOrSmaller;
+	rawInput = document.getElementById("tagSearch").value.toUpperCase();
+	rawInput = rawInput.split(" ").join("");
+	userInput = rawInput.split(",");
+	if (userInput.length > 0) {
+		userInput = userInput.filter(e => e !== "");
+	}
+	activeTags = userInput;
+
+	folioList = document.getElementsByClassName("folioList");
+	folioContent = document.getElementsByClassName("folioContent");
+	for (count = 0; count < folioContent.length; count++) {
+		hasAllTags = "True"
+		for (countTags = 0; countTags < userInput.length; countTags++){
+			tagName = folioContent[count].getElementsByClassName("folioContentTags")[0].innerHTML;
+			groupName = folioContent[count].getElementsByClassName("folioContentGroup")[0].innerHTML;
+			if (tagName.toUpperCase().indexOf(userInput[countTags]) > -1 && groupName.indexOf(activeGroup) > -1 && hasAllTags == "True") {
+				hasAllTags = "True"
+			} else {
+				hasAllTags = "False"
+			}
+		}
+		if (hasAllTags == "True") {
+			folioContent[count].style.display = "";	
+		} else {
+			folioContent[count].style.display = "none";
+		}
+	}
+}
+</script>
 </body>
 </html>
