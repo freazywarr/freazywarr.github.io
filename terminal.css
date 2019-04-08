@@ -53,3 +53,13 @@ body {
 	height: 85vh;
 	background-color: red;
 }
+
+@media screen and (max-width: 800px) {
+	body {
+		font-size: 3vh;
+	}
+	
+	.userInput {	
+		height: 3vh;
+		font-size: 3vh;
+}

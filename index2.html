@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div id="widthCalculator" class="widthCalculator">texting</div>
-	<div class="terminal">
+	<div id="terminal" class="terminal">
 		
 		<div id="currentDirectory" class="currentDirectoy">Text</div>
 		<input type="text" id="terminalInput" onkeyup="return terminalInput(event)" class="userInput" placeholder="Enter commands here...">
@@ -226,14 +226,17 @@ function updateScreen() {
 }
 
 function updateTerminalInputPosition() {
-	var getDiv, divHeight, divWidth;
+	var testDiv, divHeight, divWidth, terminalDiv, terminalWidth;
 	testDiv = document.getElementById("widthCalculator");
 	testDiv.innerHTML = displayDirectory + ">";
-	divHeight = (testDiv.clientHeight) + "px";
-	divWidth = (testDiv.clientWidth) + "px"
-
-	console.log(divHeight, divWidth);
-	document.getElementById("terminalInput").style.left = divWidth;
+	divHeight = (testDiv.clientHeight);
+	divWidth = (testDiv.clientWidth);
+	terminalDiv = document.getElementById("terminal");
+	terminalWidth = (terminalDiv.clientWidth);
+	
+	console.log(divHeight, divWidth, terminalWidth);
+	document.getElementById("terminalInput").style.left = divWidth + "px";
+	document.getElementById("terminalInput").style.width = (terminalWidth - divWidth) + "px";
 }
 </script>
 </body>
