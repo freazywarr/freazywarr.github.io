@@ -64,4 +64,12 @@ body {
 		height: 4vw;
 		font-size: 4vw;
 	}
+	
+	.terminal {
+		height: 100%;
+	}
+	
+	.terminalOutput {
+		height: 100%;
+	}
 }
