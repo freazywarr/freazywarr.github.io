@@ -56,10 +56,10 @@ body {
 
 @media screen and (max-width: 800px) {
 	body {
-		font-size: 3vh;
+		font-size: 2vh;
 	}
 	
 	.userInput {	
-		height: 3vh;
-		font-size: 3vh;
+		height: 2vh;
+		font-size: 2vh;
 }
