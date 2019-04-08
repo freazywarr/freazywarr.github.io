@@ -1,10 +1,17 @@
-body { margin: 1vw; margin-top: 0%; padding: 0; background-color: #27251F;}
-hr {width: 50%; }
+body {margin: 0%; margin-top: 0%; padding: 0; background-color: #27251F; }
+hr {width: 100%; color: #27251F}
 
-.topDisplay {
-	font-family: "arial", Arial, sans-serif; 
-	color: #D9D9D6;
-}
+a {	outline: none;}
+
+a:focus {filter: brightness(70%);}
+a:hover {filter: brightness(120%);}
+a:active {filter: brightness(80%);}
+
+button {outline: none;}
+button:focus {filter: brightness(70%) ;outline: none;}
+button:hover {filter: brightness(120%) ;outline: none;}
+button:active {filter: brightness(80%) ;outline: none;}
+button::-moz-focus-inner {border: 0;}
 
 .topLogo {
 	text-align: center;
@@ -19,7 +26,6 @@ hr {width: 50%; }
 }
 
 .returnButtonContainer {
-	font-size: 5em;
 	width: auto;
 	position: relative;
 	text-align: center;
@@ -40,10 +46,6 @@ hr {width: 50%; }
 	height: 100%;
 }
 
-.returnButton:hover {
-	filter: brightness(80%);
-}
-
 .bottomDisplay {
 	font-family: "arial", Helvetica, sans-serif; 
 	font-size: 50px; 
@@ -59,7 +61,6 @@ hr {width: 50%; }
 }
 
 .indexButtonContainer {
-	font-size: 5em;
 	width: auto;
 	position: relative;
 	text-align: center;
@@ -80,10 +81,6 @@ hr {width: 50%; }
 	height: 100%;
 }
 
-.indexButton:hover {
-	filter: brightness(80%);
-}
-
 .folioButtons {
 	margin-left: 10%;
 	width: 8.35%;
@@ -93,10 +90,6 @@ hr {width: 50%; }
 
 .folioButtons img {
 	width: 100%;
-}
-
-.folioButtons a:hover {
-	filter: brightness(80%);
 }
 
 .button {
@@ -115,12 +108,6 @@ hr {width: 50%; }
 	margin: 0px;
 	padding-top: 0.6vw;
 	padding-bottom: 0.4vw;
-
-}
-
-
-.button:hover {
-	filter: brightness(80%);
 }
 
 .folioList {
@@ -129,204 +116,13 @@ hr {width: 50%; }
     overflow: hidden;
 }
 
+//.folioContentGroup {
+	display: none;
+}
+
+//.folioContentTags {
+	display: none;
+}
 
 
 
-
-
-
-	
-.fullHeader {
-	font-family: "arial", Helvetica, sans-serif; 
-	font-size: 150px; 
-	color: #D9D9D6;
-	text-align: center;
-}
-
-.fullHeader a{
-	text-decoration: none; 
-	color: #D9D9D6;
-}
-
-.fullHeader:hover a{
-	text-align: center; 
-	color: #9EA2A2;
-}
-
-.smallHeader {
-	font-family: "arial", Helvetica, sans-serif; 
-	font-size: 100px; 
-	color: #D9D9D6;
-	text-align: center;
-}
-
-.smallHeader a{
-	text-decoration: none; 
-	color: #D9D9D6;
-}
-
-.smallHeader:hover a{
-	text-align: center; 
-	color: #9EA2A2;
-}
-
-.index {
-	font-family: "arial", Helvetica, sans-serif;
-	line-height: 26px;
-}
-	
-.index h2 {
-	font-size: 40px;
-	color: #D9D9D6;
-	text-align: center;
-}
-		
-.index a {
-	font-size: 30px; 
-	text-decoration: none;
-	color: #6CACE4; 
-	text-align: left; 
-	text-indent: 2em; 
-	margin-left: 8%;
-}
-		
-.index a:visited {
-	color: #307FE2;
-}
-		
-.index a:hover {
-	color: #B5BD00;
-}
-
-.index a:active { 
-	color: #737B4C;
-}
-		
-.index p {
-	font-size: 25px; 
-	color: #D9D9D6; 
-	text-align: left; 
-	text-indent: 4em; 
-	margin-left: 10%;
-}
-
-.textBox {
-	font-family: "arial", Helvetica, sans-serif;
-	line-height: 26px;
-}
-
-.textBox h2 {
-	font-size: 40px;
-	color: #D9D9D6;
-	text-align: center;
-}
-	
-.textBox p {
-	font-size: 25px; 
-	color: #D9D9D6; 
-	text-align: left; 
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
-.textBox table {
-	font-family: "arial", Helvetica, sans-serif;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 800px;
-}
-
-.textBox th {
-	font-size: 35px;
-	line-height: 35px;
-	color: #D9D9D6;
-	text-align: center;
-	width: 400px;
-	height: 40px
-}
-
-.textBox a {
-	text-decoration: none;
-	color: #6CACE4;   
-}
-		
-.textBox a:visited {
-	color: #307FE2;
-}
-		
-.textBox a:hover {
-	color: #B5BD00;
-}
-
-.textBox a:active { 
-	color: #737B4C;
-}
-
-.textBox td {
-	width: 400px;
-}
-
-		
-@media screen and (max-width: 800px) {
-	.fullHeader { 
-		font-size: 15vw;
-	}
-	
-	.smallHeader { 
-		font-size: 15vw;
-	}
-			
-	br {
-		line-height: 1vw;
-	}
-	
-	.index {
-		line-height: 6vw;
-		}
-		
-	.index h2 {
-		font-size: 8vw;
-	}
-			
-	.index a {
-		font-size: 6vw; 
-		text-indent: 2vw; 
-		margin-left: 0vw;
-	}
-			
-	.index p {
-		font-size: 5.5vw;  
-		text-indent: 13vw; 
-		margin-left: 1vw;
-	}
-	
-	.textBox {
-		line-height: 6vw;
-		}
-		
-	.textBox h2 {
-		font-size: 8vw;
-	}
-					
-	.textBox p {
-		font-size: 5.5vw;  
-		margin-left: 1vw;
-		margin-right: 1vw;
-	}
-	
-	.textBox table {
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		width: 100%;
-	}
-	
-	.textBox th {
-		font-size: 7vw;
-		line-height: 7vw;
-		height: 100%;
-	}
-	
-}
-		
