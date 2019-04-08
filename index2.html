@@ -235,8 +235,14 @@ function updateTerminalInputPosition() {
 	terminalWidth = (terminalDiv.clientWidth);
 	
 	console.log(divHeight, divWidth, terminalWidth);
-	document.getElementById("terminalInput").style.left = divWidth + "px";
-	document.getElementById("terminalInput").style.width = (terminalWidth - divWidth) + "px";
+	
+	if (terminalWidth > 721) {
+		document.getElementById("terminalInput").style.left = divWidth + "px";
+		document.getElementById("terminalInput").style.width = (terminalWidth - divWidth) + "px";
+	} else {
+		document.getElementById("terminalInput").style.left = "0px";
+		document.getElementById("terminalInput").style.width = terminalWidth + "px";
+	}
 }
 </script>
 </body>

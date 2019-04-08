@@ -60,6 +60,8 @@ body {
 	}
 	
 	.userInput {	
+		position: relative;
 		height: 2vh;
 		font-size: 2vh;
+	}
 }
