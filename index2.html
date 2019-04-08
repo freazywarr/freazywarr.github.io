@@ -7,13 +7,234 @@
 	<meta name="keywords" content="Python, programming, software, scripts">
 	<meta name="author" content="Emily Warr">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="terminal.css">
 	<meta charset="UTF-8">
 	
 </head>
 <body>
-<input type="text" id="terminalInput" onkeyup="return terminalInput(event)">
+	<div id="widthCalculator" class="widthCalculator">texting</div>
+	<div class="terminal">
+		
+		<div id="currentDirectory" class="currentDirectoy">Text</div>
+		<input type="text" id="terminalInput" onkeyup="return terminalInput(event)" class="userInput" placeholder="Enter commands here...">
+		<div class="terminalOutput">
+			Type 'help' for a list of commands. <br>
+			Line 2<br>
+			Line 3<br>
+			Line 4<br>
+			Line 5<br>
+			Line 6<br>
+			Line 7<br>
+			Line 8<br>
+			Line 9<br>
+			Line 10<br>
+			Line 11<br>
+			Line 12<br>
+			Line 13<br>
+			Line 14<br>
+			Line 15<br>
+			Line 16<br>
+			Line 17<br>
+			Line 18<br>
+		</div>
+	</div>
+
+
+	
 <script>
+var currentDrive, currentDirectory, displayDirectory, displayDirectoryList, commandsList, adminPowers, driveList, directoryCList, directoryDList;
+currentDrive = 'c:';
+currentDirectory = 'root';
+displayDirectory = currentDrive + "/" + currentDirectory + "/";
+displayDirectoryList = [currentDrive, currentDirectory];
+commandsList = ['cd', 'list', 'drive', 'open', 'run'];
+adminPowers = 'True';
+
+driveList = ['c:', 'd:'];
+
+directoryCList = {
+	layout: ['parentDirectory', 'adminOrUser', ['text', 'file1.txt'], ['child','subdirectory'], 'etc'],
+	root: ['null', 'admin', ['child', 'sys']],
+	sys: ['root', 'admin',  ['child', 'cmd']]
+};
+directoryDList = {
+	root: ['null', 'user', ['child', 'files']],
+	files: ['root', 'user', ['child', 'personal'], ['child', 'work']]
+};
+
+fileTypes = ['child', 'image', 'text', 'script', 'executable'];
+
+setInterval(updateScreen, 33);
+
+
+
+
+
+
+
+
+
+
+function terminalInput(event) {
+	var userInput;
+	userInput = document.getElementById("terminalInput").value
+	userInput = userInput.split(" ");
+	console.log(userInput)
+	console.log('Current Drive: ' + currentDrive);
+	console.log('Current Directory: ' + currentDirectory);
+	console.log('Display Directory: ' + displayDirectory);
+	console.log(displayDirectoryList)
+	if (event.which == 13 || event.keyCode == 13) {
+		console.log('Enter has been pressed');
+		terminalInputExecute(userInput)
+	}
+	console.log(event);
+}
+
+function terminalInputExecute(userInput) {
+	var validInput;
+	validInput = 'False';
+	console.log('Do something with: ' + userInput)
+	document.getElementById('terminalInput').value = "";
+	
+	for (count = 0; count < commandsList.length; count++) {
+		if (userInput[0] == commandsList[count]) {
+			console.log('Valid User Input');
+			validInput = 'True';
+			break
+		}
+	}
+	
+	if (validInput == 'True') {
+		console.log('Executing: ' + userInput[0]);
+		if (userInput[0] == 'cd') {
+			changeDirectory(userInput[1]);
+		}
+		
+		if (userInput[0] == 'list') {
+			listSubdirectories(userInput[1]);
+		}
+		
+		if (userInput[0] == 'drive') {
+			driveCommand(userInput[1]);
+		}
+		
+		if (userInput[0] == 'open') {
+			openFile(userInput[1]);
+		}
+		
+		if (userInput[0] == 'run') {
+			runProgram(userInput[1]);
+		}
+		
+	} else {
+		console.log(userInput[0] + ' is not a valid command.');
+	}
+}
+
+
+
+
+
+
+
+
+
+
+function changeDirectory(userInput) {
+	var validInput;
+	validInput = 'False';
+	console.log('Changing directory: ' + userInput);
+	if (userInput == "/") {
+		currentDirectory = 'root';
+		displayDirectoryList = [currentDrive, currentDirectory];
+		validInput = 'True';
+	}
+	
+	if (userInput == "..") {
+		if (currentDirectory != 'root') {
+			if (currentDrive == 'c:') {
+				currentDirectory = directoryCList[currentDirectory][0];
+			} else {
+				currentDirectory = directoryDList[currentDirectory][0];
+			}
+		displayDirectoryList.pop(); 
+		}
+		validInput = 'True';
+	}
+	if (currentDrive == 'c:'){
+		for (count = 2; count < directoryCList[currentDirectory].length; count++) {
+			if (directoryCList[currentDirectory][count][0] == 'child') {
+				if (userInput == directoryCList[currentDirectory][count][1]) {
+					currentDirectory = directoryCList[currentDirectory][count][1];
+					displayDirectoryList.push(currentDirectory);
+					validInput = 'True';
+					break
+				}
+			}
+		}
+	} else {
+		for (count = 2; count < directoryDList[currentDirectory].length; count++) {
+			if (directoryDList[currentDirectory][count][0] == 'child') {
+				if (userInput == directoryDList[currentDirectory][count][1]) {
+					currentDirectory = directoryDList[currentDirectory][count][1];
+					displayDirectoryList.push(currentDirectory);
+					validInput = 'True';
+					break
+				}
+			}
+		}
+	}
+	
+	
+	if (validInput == 'False') {
+		console.log(userInput + ' is not a valid directory.');
+	}
+}
+
+function listSubdirectories(userInput) {
+	console.log('Listing subdirectoy: ' + userInput);
+	if (currentDrive == 'c:'){
+		for (count = 2; count < directoryCList[currentDirectory].length; count++) {
+			console.log(directoryCList[currentDirectory][count][1]);
+		}
+	} else {
+		for (count = 2; count < directoryDList[currentDirectory].length; count++) {
+			console.log(directoryDList[currentDirectory][count][1]);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+function updateScreen() {
+
+	displayDirectory = displayDirectoryList[0] + "/"
+	for (count = 1; count < displayDirectoryList.length; count++) {
+		displayDirectory = displayDirectory + displayDirectoryList[count] + "/"
+	}
+
+	document.getElementById("currentDirectory").innerHTML = displayDirectory + ">";
+	updateTerminalInputPosition();
+}
+
+function updateTerminalInputPosition() {
+	var getDiv, divHeight, divWidth;
+	testDiv = document.getElementById("widthCalculator");
+	testDiv.innerHTML = displayDirectory + ">";
+	divHeight = (testDiv.clientHeight) + "px";
+	divWidth = (testDiv.clientWidth) + "px"
+
+	console.log(divHeight, divWidth);
+	document.getElementById("terminalInput").style.left = divWidth;
+}
 </script>
 </body>
 </html>
