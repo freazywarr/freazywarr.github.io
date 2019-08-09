@@ -11,7 +11,7 @@
 	
 </head>
 <body>
-	<div class="smallHeader">
+	<div class="header">
 		<a href="index.html">Emily Warr</a>
 	</div>
 	
@@ -20,11 +20,13 @@
 	<br>
 	
 	<div class="index">
-		<a href="index.html">&larr; Return to Main Index</a>
-		<br>
-		<hr>
-		<br>
+		<a href="index">&larr; Return to Main Index</a>
+		
 	</div>
+	
+	<br>
+	<hr>
+	<br>
 	
 	<div class="textBox">
 		<h2>About Me</h2>
