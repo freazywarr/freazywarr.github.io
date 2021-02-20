@@ -108,6 +108,75 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	width: 400px;
 }
 
+.radioPlayer {
+	margin-left: 8%;
+	margin-right: 8%;
+}
+
+.radioPlayer h1 {
+	font-size: 40px;
+	text-align: center;
+}
+
+.radioPlayer h2 {
+	font-size: 30px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.radioPlayer p {
+	font-size: 25px; 
+	margin-left: 6%;
+	margin-right: 6%;
+}
+
+.radioPlayer a {
+	font-size: 30px; 
+	text-decoration: none;
+	color: #6CACE4; 
+	text-align: left; 
+	text-indent: 2em; 
+	margin-left: 8%;
+}
+.radioPlayer a:visited {color: #307FE2;}
+.radioPlayer a:focus {color: #B5BD00; filter: brightness(70%);}
+.radioPlayer a:hover {color: #B5BD00; filter: brightness(70%);}
+.radioPlayer a:active {color: #737B4C; filter: brightness(110%);}
+
+.radioPlayerSettings {
+	margin-left: 8%;
+	margin-right: 8%;
+}
+
+.radioPlayerSettings h1 {
+	font-size: 40px;
+	text-align: center;
+}
+
+.radioPlayerSettings h2 {
+	font-size: 30px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.radioPlayerSettings p {
+	font-size: 25px; 
+	margin-left: 6%;
+	margin-right: 6%;
+}
+
+.radioPlayerSettings a {
+	font-size: 30px; 
+	text-decoration: none;
+	color: #6CACE4; 
+	text-align: left; 
+	text-indent: 2em; 
+	margin-left: 8%;
+}
+.radioPlayerSettings a:visited {color: #307FE2;}
+.radioPlayerSettings a:focus {color: #B5BD00; filter: brightness(70%);}
+.radioPlayerSettings a:hover {color: #B5BD00; filter: brightness(70%);}
+.radioPlayerSettings a:active {color: #737B4C; filter: brightness(110%);}
 
 
 @media screen and (max-width: 800px) {
