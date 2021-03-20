@@ -120,6 +120,14 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	font-family: "Times New Roman", Times, serif; 
 }
 
+.publicationDescription img {
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	max-width: 90%;
+	height: auto;
+}
+
 .publicationText {
 	font-size: 25px;
 	margin-left: 5%;
