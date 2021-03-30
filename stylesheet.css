@@ -80,6 +80,7 @@ a:active {color: #737B4C; filter: brightness(110%);}
 }
 
 .textBox p {
+	text-align: justify;
 	font-size: 25px; 
 	color: #D9D9D6; 
 	text-align: left; 
@@ -106,6 +107,24 @@ a:active {color: #737B4C; filter: brightness(110%);}
 
 .textBox td {
 	width: 400px;
+}
+	
+.art {
+	margin-left: 8%;
+	margin-right: 8%;
+}
+	
+.art h1 {
+	font-size: 30px;
+	text-align: center;
+}
+
+.art img {
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	max-width: 100%;
+	height: auto;
 }
 	
 .publicationDescription {
@@ -204,5 +223,10 @@ a:active {color: #737B4C; filter: brightness(110%);}
 		font-size: 7vw;
 		line-height: 7vw;
 		height: 100%;
+	}
+	
+	.art h1 {
+		font-size: 5vw;
+		text-align: center;
 	}
 }
