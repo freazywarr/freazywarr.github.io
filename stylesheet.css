@@ -56,6 +56,12 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	margin-right: 6%;
 }
 
+.index li {
+	font-size: 25px; 
+	margin-left: 12%;
+	margin-right: 12%;
+}	
+
 .index a {
 	font-size: 30px; 
 	text-decoration: none;
