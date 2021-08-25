@@ -171,6 +171,45 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	text-align: justify;
 }
 
+.essayDescription {
+	font-size: 25px;
+	margin-left: 5%;
+	margin-right: 5%;
+	line-height: 36px;
+	text-align: justify;
+}
+
+.essayDescription blockquote {
+	font-family: "Times New Roman", Times, serif; 
+}
+
+.essayDescription img {
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	max-width: 90%;
+	height: auto;
+}
+
+.essayText {
+	font-size: 25px;
+	margin-left: 5%;
+	margin-right: 5%;
+	line-height: 40px;
+	font-family: "Times New Roman", Times, serif; 
+}
+
+.essayText h2 {
+	text-align: center;
+	font-weight: normal;
+	line-height: 50px;
+}
+
+.essayText p {
+	text-indent: 50px;
+	text-align: justify;
+}
+
 @media screen and (max-width: 800px) {
 	.header { 
 		font-size: 15vw;
