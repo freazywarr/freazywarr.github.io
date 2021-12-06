@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Freazy Warr - Style Guide</title>
+	
+	<meta name="description" content="My Personal Style Guide.">
+	<meta name="keywords" content="documentation, style guide">
+	<meta name="author" content="Freazy Warr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+	<meta charset="utf-8"/>
+	
+</head>
+<body>
+	<div class="header">
+		<a href="../index.html">Freazy Warr</a>
+	</div>
+	
+	<br>
+	<hr>
+	<br>
+		
+	<h2><a href="../index.html">&larr; Return to Main Index</a></h2>
+	<h2><a href="index.html">&larr; Return to Documentation Index</a></h2>
+		
+	<br>
+	<hr>
+	<br>
+	
+	<h1>Style Guide</h1>
+	<p>This style guide is something I am slowly working on overtime. Hopefully, it will help make my writing more consistent across all of my work.</p>
+	<p>You can quickly find style guide entries using this input field. Each entry has an assortment of keywords to help make searching easier. You can look up multiple keywords at once by separating them with commas in the input field.</p>
+	<input type="text" id="tagSearch" onkeyup="tagSearch()" placeholder="Search Example: 'freazy, wolf alice'" title="Try 'Freazy' or 'Wolf Alice'.">
+	
+	<br>
+	<hr>
+	<br>
+				
+	<!--<div class="folioContent">
+		<h2>Arjun Global Ltd</h2>
+		<ul>
+			<li>A recruitment company based in Angel Islington.</li>
+			<li>Should just be referred to as <i>Arjun Global</i> in social media and blog posts.</li>
+		</ul>
+		<div class="folioContentTags">
+			arjungloballtd, arjun, global, arjunglobal
+		</div>
+	</div>-->
+		
+	<div class="folioContent">
+		<h2>Freazy</h2>
+		<dl>
+			<dt>The first name of this sites author.</dt>
+			<dt>The name of a Wolf Alice song.</dt>
+		</dl>
+		<div class="folioContentTags">
+			freazy, warr, freazywarr, wolfalice, myloveiscool
+		</div>
+	</div>
+		
+	<div class="folioContent">
+		<h2>WAD</h2>
+		<dl>
+			<dt>Acronym for 'Where's All the Data?'</dt>
+		</dl>
+		<div class="folioContentTags">
+			wad, doom, hexen, heretic, strife
+		</div>
+	</div>
+		
+	<div class="folioContent">
+		<h2>Wolf Alice</h2>
+		<dl>
+			<dt>An indie rock band from Camden, London.</dt>
+		</dl>
+		<div class="folioContentTags">
+			wolfalice, myloveiscool
+		</div>
+	</div>
+	
+	<br>
+	<hr>
+	<br>
+	
+</body>
+<script>
+//I wrote this script a long time ago so I'm sure it features redundancies.
+//Feel free to copy it and use it for you own site, though frankly you could probably make something better.
+//The original intention for this script was so I could list and find Star Trek episodes.
+//In this version there is an unused class called "folioContentGroup" which was originally used to group the episodes by their series: TNG, DS9, etc.
+//I have no use for this class here but I don't want to try and remove the code.
+var activeGroup, activeTags;
+activeGroup = [""];
+activeTags = [""];
+
+function tagSearch() {
+	var rawInput, userInput, folioContent, hasAllTags, folioContentView, folioContentLength, countTags, count, tagName, groupName, biggerOrSmaller;
+	rawInput = document.getElementById("tagSearch").value.toUpperCase(); //Capitalises user input.
+	rawInput = rawInput.split(" ").join(""); //Removes spaces from the user input.
+	userInput = rawInput.split(",");
+	if (userInput.length > 0) {
+		userInput = userInput.filter(e => e !== ""); //I have no idea.
+	}
+	activeTags = userInput;
+
+	folioContent = document.getElementsByClassName("folioContent");
+	for (count = 0; count < folioContent.length; count++) {
+		hasAllTags = "True"
+		for (countTags = 0; countTags < userInput.length; countTags++){
+			tagName = folioContent[count].getElementsByClassName("folioContentTags")[0].innerHTML;
+			if (tagName.toUpperCase().indexOf(userInput[countTags]) > -1 && hasAllTags == "True") {
+				hasAllTags = "True"
+			} else {
+				hasAllTags = "False"
+			}
+		}
+		if (hasAllTags == "True") {
+			folioContent[count].style.display = "";	
+		} else {
+			folioContent[count].style.display = "none";
+		}
+	}
+}
+</script>
+</html>
