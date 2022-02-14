@@ -114,6 +114,19 @@ a:focus {color: #B5BD00; filter: brightness(70%);}
 a:hover {color: #B5BD00; filter: brightness(70%);}
 a:active {color: #737B4C; filter: brightness(110%);}
 
+textarea {
+	resize: none;
+	width: 76%;
+	display:block;
+	margin: 0 auto;
+	padding: 8px 4%;
+	background-color: #D9D9D6;
+	color: #27251F;
+	outline: none;
+	border: 2px solid #27251F;
+  
+}
+
 .publicationText {
 	margin-left: 4%;
 	margin-right: 4%;

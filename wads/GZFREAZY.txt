@@ -1,0 +1,70 @@
+===========================================================================
+Advanced engine needed  : GZDoom
+Primary purpose         : Singleplayer
+===========================================================================
+Title                   : Freazy's Ultimate Doom Recreation for GZDoom v0.1
+Filename                : GZFREAZY.WAD
+Release date            : 14/02/22
+Author                  : Freazy Warr
+Email Address           : doom@freazywarr.com
+
+Description             : This project is something I have been working on in an
+                          attempt to learn the more advanced features of GZDoom. 
+                          This is version 0.1, which consists of two maps - E1M1 
+                          and E1M2.  
+                          
+                          This wad currently only has three difficulties, though
+                          one simply removes monsters. I may add more 
+                          difficulties in the future.
+                          
+                          An ACS Library can be found inside the lump. It
+                          contains the code for the breakable windows and the 
+                          monster spawners. This library is currently
+                          undocumented but you may use it if you want.
+                          
+                          This wad requires jumping, crouching, and freelook
+                          to be enabled.
+
+===========================================================================
+* What is included *
+
+New levels              : 2
+Sounds                  : No
+Music                   : No
+Graphics                : Yes
+Dehacked/BEX Patch      : No
+Demos                   : No
+Other                   : An ACS Library 
+Other files required    : None
+
+
+* Play Information *
+
+Game                    : DOOM2
+Map #                   : E1M1, E1M2
+Single Player           : Designed for
+Cooperative 2-4 Player  : No
+Deathmatch 2-4 Player   : No
+Other game styles       : None
+Difficulty Settings     : No Monsters, Ultra-Violence, and Nightmare.
+
+
+* Construction *
+
+Base                    : New from scratch
+Build Time              : Unknown
+Editor(s) used          : Ultimate Doom Builder 3.0.0.3890 (69cac01),
+                          SLADE v3.1.13
+Known Bugs              : None that I am aware of.
+May Not Run With        : Vanilla, Boom
+Tested With             : GZDoom
+
+
+
+* Copyright / Permissions *
+
+This project exists in the public domain. 
+
+* Where to get the file that this text file describes *
+
+Web sites: https://www.freazywarr.com/wads/GZFREAZY.html
