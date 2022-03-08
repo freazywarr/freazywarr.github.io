@@ -1,0 +1,62 @@
+===========================================================================
+Advanced engine needed  : Boom (-complevel 9)
+Primary purpose         : Singleplayer
+===========================================================================
+Title                   : Freazy's Untitled PRBoom+ Project v0.1
+Filename                : FRZYBOOM.WAD
+Release date            : 08/03/22
+Author                  : Freazy Warr
+Email Address           : doom@freazywarr.com
+
+Description             : This project is something I have been working on in an
+                          attempt to get into Boom wadding. This is version 0.1,
+                          which consists of just one map - MAP01.  
+						  
+                          The level is somewhat forgiving, though the difficulty
+                          does ramp up as you progress. 
+
+===========================================================================
+* What is included *
+
+New levels              : 1
+Sounds                  : No
+Music                   : No
+Graphics                : No
+Dehacked/BEX Patch      : No
+Demos                   : No
+Other                   : No 
+Other files required    : None
+
+
+* Play Information *
+
+Game                    : DOOM2
+Map #                   : MAP01
+Single Player           : Designed for
+Cooperative 2-4 Player  : No
+Deathmatch 2-4 Player   : No
+Other game styles       : None
+Difficulty Settings     : Yes
+
+
+* Construction *
+
+Base                    : New from scratch
+Build Time              : Unknown
+Editor(s) used          : Ultimate Doom Builder 3.0.0.3890 (69cac01),
+                          SLADE v3.1.13
+Known Bugs              : It is possible, though unlikely, for monsters to not
+                          come out of their closets.
+May Not Run With        : Vanilla
+Tested With             : PRBoom+
+
+
+
+* Copyright / Permissions *
+
+This project exists in the public domain. 
+
+* Where to get the file that this text file describes *
+
+Web sites: https://www.freazywarr.com/wads/FRZYBOOM.html
+GitHub: https://github.com/freazywarr/Untitled-PRBoom-Project
