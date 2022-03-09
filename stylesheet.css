@@ -126,6 +126,27 @@ textarea {
 	border: 2px solid #27251F;
 }
 
+table.cv {
+	width: 90%;
+}
+
+table.cv td {
+	width: initial;
+	text-align: left;
+	vertical-align: top;
+	padding-bottom: 25px;
+}
+
+ul {
+	font-size: 24px;
+	text-align: justify;	
+	margin-left: 2%;
+	margin-right: 0%;
+}
+
+
+
+
 .publicationText {
 	margin-left: 4%;
 	margin-right: 4%;
@@ -302,15 +323,7 @@ textarea {
 	text-align: justify;
 }
 
-.cv table {
-	width: 90%;
-}
 
-.cv td {
-	text-align: left;
-	vertical-align: top;
-	padding-bottom: 25px;
-}
 
 .FRZYDOOMindex {
 	margin-left: 8%;
