@@ -1,0 +1,79 @@
+================================================================================
+Advanced engine needed  : Boom, or more advanced.
+Primary purpose         : Singleplayer, Multiplayer
+================================================================================
+Title                   : Pride Flag Status Bar Edits
+Filenames               : prideflag_aromantic.wad
+                          prideflag_asexual.wad
+                          prideflag_bear.wad
+                          prideflag_bear_nopaw.wad
+                          prideflag_genderqueer.wad
+                          prideflag_lesbian_fivestripe.wad
+                          prideflag_nonbinary.wad
+                          prideflag_pansexual.wad
+                          prideflag_rainbow_classic.wad
+                          prideflag_rainbow_intersex.wad
+                          prideflag_rainbow_progress.wad
+                          prideflag_trans.wad
+Release date            : 24/08/22
+Author                  : Freazy Warr
+Email Address           : doom@freazywarr.com
+
+Description             : Each wad in this collection changes the status bar to
+                          a different pride flag. Each edit has been made with 
+                          Doom's limited colour palette and should be widely 
+                          compatible.
+
+                          I have not added every pride flag. Some flags use 
+                          colours which makes them incompatible with Doom's 
+                          limited colour palette. Other flags are too complex 
+                          for the size or position of the flag.  
+
+                          Feel free to download, edit, and share these edits.
+
+                          Only load one of these wads at a time, and make sure 
+                          to put them at the end of your load order.
+
+================================================================================
+* What is included *
+
+New levels              : 0
+Sounds                  : No
+Music                   : No
+Graphics                : Yes
+Dehacked/BEX Patch      : No
+Demos                   : No
+Other                   : No 
+Other files required    : None
+
+
+* Play Information *
+
+Game                    : DOOM1 & DOOM2
+Map #                   : No
+Single Player           : Designed for
+Cooperative 2-4 Player  : Designed for
+Deathmatch 2-4 Player   : Designed for
+Other game styles       : None
+Difficulty Settings     : No
+
+
+* Construction *
+
+Base                    : Edits original status bar texture.
+Build Time              : Unknown
+Editor(s) used          : Paint.net,
+                          SLADE v3.1.13
+Known Bugs              : None, these are just simple edits.
+May Not Run With        : Vanilla
+Tested With             : PRBoom+, Doom Retro
+
+
+
+* Copyright / Permissions *
+
+This project exists in the public domain. 
+
+* Where to get the download the wad that this text file describes *
+
+Web sites: https://www.freazywarr.com/wads/GAYPRIDE.html
