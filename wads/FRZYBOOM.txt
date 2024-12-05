@@ -2,23 +2,28 @@
 Advanced engine needed  : Boom (-complevel 9)
 Primary purpose         : Singleplayer
 ================================================================================
-Title                   : Freazy's Untitled PRBoom+ Project v0.1
+Title                   : Freazy's Untitled PRBoom+ Project v0.2
 Filename                : FRZYBOOM.WAD
-Release date            : 08/03/22
+Map01 Release date      : 08/03/22
+Map02 Release date		: 05/12/24
 Author                  : Freazy Warr
 Email Address           : doom@freazywarr.com
 
 Description             : This project is something I have been working on in an
-                          attempt to get into Boom wadding. This is version 0.1,
-                          which consists of just one map - MAP01.  
+                          attempt to get into Boom wadding. This is version 0.2,
+                          which consists of just two maps - MAP01, and MAP02.  
 						  
-                          The level is somewhat forgiving, though the difficulty
-                          does ramp up as you progress. 
+                          The first level is somewhat forgiving, though the 
+                          difficulty does ramp up as you progress. 
+						  
+                          The second level can be played continuously after the
+                          first, but if you want a challenge then try it with a
+                          pistol start.
 
 ================================================================================
 * What is included *
 
-New levels              : 1
+New levels              : 2
 Sounds                  : No
 Music                   : No
 Graphics                : No
@@ -31,7 +36,7 @@ Other files required    : None
 * Play Information *
 
 Game                    : DOOM2
-Map #                   : MAP01
+Map #                   : MAP01, MAP02
 Single Player           : Designed for
 Cooperative 2-4 Player  : No
 Deathmatch 2-4 Player   : No
@@ -42,9 +47,8 @@ Difficulty Settings     : Yes
 * Construction *
 
 Base                    : New from scratch
-Build Time              : Unknown
-Editor(s) used          : Ultimate Doom Builder 3.0.0.3890 (69cac01),
-                          SLADE v3.1.13
+Build Time              : On and off (but mostly off) for 3 years.
+Editor(s) used          : Ultimate Doom Builder, SLADE, Paint.NET
 Known Bugs              : It is possible, though unlikely, for monsters to not
                           come out of their closets.
 May Not Run With        : Vanilla
