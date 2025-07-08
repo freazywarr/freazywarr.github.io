@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Nirrhit Pal</title>
+
+	<meta name="author" content="Nirrhit Pal">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<meta charset="utf-8"/>
+	
+</head>
+<body onresize="resizeBugCatcher()">
+	<div class="parentContainer">
+		<div class="indexContainer" id="mobileIndexContainer">
+			<div class="indexHeader">
+				<p><a href="index.html">nirrhit pal</a><br>art, fasion, and performance</p>		
+			</div>
+			
+			<div class="mobileIndexButton">
+				<button onclick="mobileIndexToggle()">>>></button>
+			</div>
+			
+			<div class="indexList">
+				<button class="indexItem" onclick="indexDropDown('fashionSubList')">>fashion</button><br>
+				<div class="indexSubList" id="fashionSubList" style="display:none;">
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage3.html">Test Page 3</a>
+				</div>
+				<button class="indexItem" onclick="indexDropDown('sculptureSubList')">>sculpture</button><br>
+				<div class="indexSubList" id="sculptureSubList" style="display:none;">
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage3.html">Test Page 3</a>
+				</div>
+				<button class="indexItem" onclick="indexDropDown('performanceSubList')">>performance</button><br>
+				<div class="indexSubList" id="performanceSubList" style="display:none;">
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage3.html">Test Page 3</a>
+				</div>
+				<button class="indexItem" onclick="indexDropDown('miscSubList')">>misc</button><br>
+				<div class="indexSubList" id="miscSubList" style="display:none;">
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage3.html">Test Page 3</a>
+				</div>
+				<br>
+				<br>
+				<button class="indexItem" onclick="indexDropDown('exhibitionsSubList')">>exhbitions</button><br>
+				<div class="indexSubList" id="exhibitionsSubList" style="display:none;">
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage3.html">Test Page 3</a>
+				</div>
+				<button class="indexItem" onclick="indexDropDown('featuresSubList')">>features</button><br>
+				<div class="indexSubList" id="featuresSubList" style="display:none;">
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage3.html">Test Page 3</a>
+				</div>
+				</p>
+			</div>
+			
+			<div class="indexFooter">
+				<p>	>contact<br>
+				<a href="mailto:nirrhitpal@gmail.com">nirrhitpal@gmail.com</a><br>
+				<a href="https://www.instagram.com/nirrhitpal/">Instagram</a>		
+			</div>
+		</div>
+		
+		<div class="contentContainer">
+			<div class="contentHeader">
+				<div class="contentTitle">
+					<h2>Content Title</h2>
+				</div>
+				<div class="siteLogo">
+					<img src="siteLogo.png">
+				</div>
+			</div>
+			
+			<div class="mobileHeader">
+				<div class="mobileHeaderContent" id="mobileHeaderContent">
+					<h2>Content Title</h2>
+				</div>
+				<div class="mobileHeaderButton" id="mobileHeaderButton">
+					<button onclick="mobileIndexToggle()">>>></button>
+				</div>
+			</div>
+			
+			<div class="contentBody">
+				<div class="contentSingleJustified">
+					<p>This is a single column content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="contentDouble">
+					<div class="contentDoubleLeft">
+						<img src="aboutImage.png">
+					</div>
+					<div class="contentDoubleRight">
+						<p>This is the right side of a double column content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+				
+				<div class="contentSingleJustified">
+					<p>This is a single column content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<img src="testImage.png">
+				</div>
+		</div>
+
+		<div class="mobileFooter">
+			<p>	>contact<br>
+			<a href="mailto:nirrhitpal@gmail.com">nirrhitpal@gmail.com</a><br>
+			<a href="https://www.instagram.com/nirrhitpal/">Instagram</a>		
+		</div>
+	</div>
+</body>
+<script>
+const indexSubLists = ["fashionSubList", "sculptureSubList", "performanceSubList", "miscSubList", "exhibitionsSubList", "featuresSubList"];
+const dedicatedSubList = "fashionSubList";
+var mobileIndexOpen = 0
+
+function indexDropDown(listID) {
+	console.log("Is this thing on?");
+	for (let i = 0; i < indexSubLists.length; i++) {
+		if (indexSubLists[i] != listID && indexSubLists[i] != dedicatedSubList) {
+			document.getElementById(indexSubLists[i]).style.display = "none";
+		}
+	}
+		
+	var x = document.getElementById(listID);
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+
+function mobileIndexToggle() {
+	if (mobileIndexOpen == 0) {
+		console.log("Open Mobile Index");
+		document.getElementById("mobileIndexContainer").style.width = "100%";
+		mobileIndexOpen = 1;
+	} else {
+		console.log("Close Mobile Index");
+		document.getElementById("mobileIndexContainer").style.width = "0%";
+		mobileIndexOpen = 0;
+	}			
+}
+
+function resizeBugCatcher() {
+	var w = window.innerWidth;
+	if (w > 800) {
+		document.getElementById("mobileIndexContainer").style.width = "25%";
+	} else {
+		document.getElementById("mobileIndexContainer").style.width = "0%";
+		mobileIndexOpen = 0
+	}
+}
+</script>
+</html> 
