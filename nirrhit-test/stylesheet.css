@@ -3,7 +3,7 @@ body {
 	padding: 0; 
 	background-color: #000; 
 	margin: auto;
-	font-family: "Arial", Arial, sans-serif; 
+	font-family: chakraPetch; 
 	color: #fff;
 	margin-left: 6%;
 	margin-right: 6%;
@@ -21,7 +21,7 @@ h2 {
 }
 
 p {
-	font-size: 16px; 
+	font-size: 18px; 
 	text-align: justify;
 	line-height: 20px;
 	margin-top: 4px;
@@ -34,6 +34,16 @@ a:focus {color: #B5BD00; filter: brightness(70%);}
 a:hover {color: #B5BD00; filter: brightness(70%);}
 a:active {color: #737B4C; filter: brightness(110%);}
 
+@font-face {
+	font-family: chakraPetch;
+	src: url(ChakraPetch-Regular.ttf);
+}
+
+@font-face {
+	font-family: chakraPetch;
+	src: url(ChakraPetch-Bold.ttf);
+	font-weight: bold;
+}
 
 .parentContainer {
 	width: 100%;
@@ -123,6 +133,10 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	right: 0%;
 }
 
+.siteLogo img {
+	width: 36px;
+}
+
 .contentBody {
 	width: 100%;
 }
@@ -135,6 +149,41 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	width: 100%;
 }
 
+.contentSingleSmall {
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
+.contentSingleSmall img {
+	width: 100%;
+}
+
+.contentSingleSmallCaption {
+	width: 50%;
+	display: block;
+	margin: auto;
+	margin-bottom: 16px;
+}
+
+.contentSingleSmallCaption p {
+	margin-top: 0px;
+	font-size: 14px;
+	margin-bottom: 4px;
+	text-align: left;
+}
+
+.contentSingleCaption {
+	width: 100%;
+	margin-bottom: 16px;
+}
+
+.contentSingleCaption p {
+	margin-top: 0px;
+	margin-bottom: 8px;
+	text-align: left;
+}
+
 .contentDouble {
 	width: 100%;
 	overflow: auto;
@@ -143,6 +192,11 @@ a:active {color: #737B4C; filter: brightness(110%);}
 
 .contentDouble img {
 	width: 100%;
+}
+
+#homepageGIF {
+	max-height:500px;
+	object-fit:cover;
 }
 
 .contentDoubleLeft {
@@ -231,6 +285,14 @@ a:active {color: #737B4C; filter: brightness(110%);}
 		display: none;
 	}
 	
+	.contentSingleSmall {
+		width: 100%;
+	}
+
+	.contentSingleSmallCaption {
+		width: 100%;
+	}
+	
 	.contentDoubleLeft {
 		width: 100%;
 		float: left;
@@ -241,6 +303,11 @@ a:active {color: #737B4C; filter: brightness(110%);}
 		width: 100%;
 		float: left;
 		padding-left: 0px;
+	}
+	
+	#homepageGIF {
+		max-height:100%;
+		object-fit:cover;
 	}
 		
 	.indexHeader {
