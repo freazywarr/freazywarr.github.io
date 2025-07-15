@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Nirrhit Pal - Zipper Series</title>
+
+	<meta name="author" content="Nirrhit Pal">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+	<meta charset="utf-8"/>
+	
+</head>
+<body onresize="resizeBugCatcher()">
+	<div class="parentContainer">
+		<div class="indexContainer" id="mobileIndexContainer">
+			<div class="indexHeader">
+				<p><a href="../index.html">nirrhit pal</a><br>art, fasion, and performance</p>		
+			</div>
+			
+			<div class="mobileIndexButton">
+				<button onclick="mobileIndexToggle()">>>></button>
+			</div>
+			
+			<div class="indexList">
+				<button class="indexItem" onclick="indexDropDown('fashionSubList')">>fashion</button><br>
+				<div class="indexSubList" id="fashionSubList" style="display:none;">
+					<a href="../fashion/streams-alike.html">Streams: Alike</a><br>
+					<a href="../fashion/the-last-footprints.html">⁠The Last Footprints</a><br>
+					<a href="../fashion/the-masculinity-odyssey.html">The Masculinity Odyssey</a>
+				</div>
+				<button class="indexItem" onclick="indexDropDown('sculptureSubList')">>sculpture</button><br>
+				<div class="indexSubList" id="sculptureSubList" style="display:none;">
+					<a href="../sculpture/zipper-series.html"><b>Zipper Series</b></a>
+				</div>
+				<button class="indexItem" onclick="indexDropDown('performanceSubList')">>performance</button><br>
+				<div class="indexSubList" id="performanceSubList" style="display:none;">
+					<a href="../performance/kock-futures.html">Koch Futures</a>
+				</div>
+				<!--<button class="indexItem" onclick="indexDropDown('miscSubList')">>misc</button><br>
+				<div class="indexSubList" id="miscSubList" style="display:none;">
+					<a href="testPage1.html">Test Page 1</a><br>
+					<a href="testPage2.html">Test Page 2</a><br>
+					<a href="testPage3.html">Test Page 3</a>
+				</div>-->
+				<br>
+				<br>
+				<button class="indexItem" onclick="indexDropDown('exhibitionsSubList')">>exhibition&workshop</button><br>
+				<div class="indexSubList" id="exhibitionsSubList" style="display:none;">
+					<a href="exhibitions/embroidery-workshop.html">Embroidery Workshop</a>
+				</div>
+				<button class="indexItem" onclick="indexDropDown('featuresSubList')">>features</button><br>
+				<div class="indexSubList" id="featuresSubList" style="display:none;">
+					<a href="https://www.grazia.co.in/fashion/experimental-make-up-artists-on-building-fantasies-10344.html.html">Grazia</a><br>
+					<a href="https://homegrown.co.in/homegrown-creators/indian-experimental-artists-are-using-makeup-as-a-form-of-surrealist-avant-garde-art">Homegrown India</a>
+				</div>
+				</p>
+			</div>
+			
+			<div class="indexFooter">
+				<p>	>contact<br>
+				<a href="mailto:nirrhitpal@gmail.com">nirrhitpal@gmail.com</a><br>
+				<a href="https://www.instagram.com/nirrhitpal/">instagram</a>		
+			</div>
+		</div>
+		
+		<div class="contentContainer">
+			<div class="contentHeader">
+				<div class="contentTitle">
+					<h2>Zipper Series</h2>
+				</div>
+				<div class="siteLogo">
+					<img src="../siteLogo.png">
+				</div>
+			</div>
+			
+			<div class="mobileHeader">
+				<div class="mobileHeaderContent" id="mobileHeaderContent">
+					<h2>Zipper Series</h2>
+				</div>
+				<div class="mobileHeaderButton" id="mobileHeaderButton">
+					<button onclick="mobileIndexToggle()">>>></button>
+				</div>
+			</div>
+			
+			<div class="contentBody">
+				<div class="contentSingleJustified">
+					<p>Zipper Series marks the beginning of my master’s journey at the Royal College of Art, where I started exploring metaphor and abstraction through multiple formats—a wearable latex top, a wall-mounted sculptural canvas and an immersive silicone body.</p>
+					<p>The zipper symbolises the body caught between borders, with skin trapped and blood shed between its teeth, representing the physical and political violence of closure and containment. The series investigates scale by shifting between body-worn and object forms, highlighting vulnerability and constraint.</p>
+				</div>
+				<br>
+				<div class="contentSingleSmall">
+					<img src="zipper-series/2Image.png">
+				</div>
+				<div class="contentSingleSmallCaption">
+					<p>Zipper II</p>
+					<p>Natural latex, hand cut EVA foam and acrylic paint on canvas, 20 x 40”</p>
+				</div>
+				<br>
+				<div class="contentSingleJustified">
+					<img src="zipper-series/3Image.png">
+				</div>
+				<br>
+		</div>
+
+		<div class="mobileFooter">
+			<p>	>contact<br>
+			<a href="mailto:nirrhitpal@gmail.com">nirrhitpal@gmail.com</a><br>
+			<a href="https://www.instagram.com/nirrhitpal/">Instagram</a>		
+		</div>
+	</div>
+</body>
+<script>
+const indexSubLists = ["fashionSubList", "sculptureSubList", "performanceSubList", /*"miscSubList",*/ "exhibitionsSubList", "featuresSubList"];
+const dedicatedSubList = "sculptureSubList";
+var mobileIndexOpen = 0
+indexDropDown(dedicatedSubList);
+
+function indexDropDown(listID) {
+	console.log("Is this thing on?");
+	for (let i = 0; i < indexSubLists.length; i++) {
+		if (indexSubLists[i] != listID && indexSubLists[i] != dedicatedSubList) {
+			document.getElementById(indexSubLists[i]).style.display = "none";
+		}
+	}
+		
+	var x = document.getElementById(listID);
+	if (x.style.display === "none") {
+		x.style.display = "block";
+	} else {
+		x.style.display = "none";
+	}
+}
+
+function mobileIndexToggle() {
+	if (mobileIndexOpen == 0) {
+		console.log("Open Mobile Index");
+		document.getElementById("mobileIndexContainer").style.width = "100%";
+		mobileIndexOpen = 1;
+	} else {
+		console.log("Close Mobile Index");
+		document.getElementById("mobileIndexContainer").style.width = "0%";
+		mobileIndexOpen = 0;
+	}			
+}
+
+function resizeBugCatcher() {
+	var w = window.innerWidth;
+	if (w > 800) {
+		document.getElementById("mobileIndexContainer").style.width = "25%";
+	} else {
+		document.getElementById("mobileIndexContainer").style.width = "0%";
+		mobileIndexOpen = 0
+	}
+}
+</script>
+</html> 
