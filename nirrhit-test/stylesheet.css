@@ -32,11 +32,11 @@ p {
 	margin-bottom: 24px;
 }
 
-a{color: #6CACE4; text-decoration: none; font-weight: normal;}
-a:visited {color: #307FE2;}
-a:focus {color: #B5BD00; filter: brightness(70%);}
-a:hover {color: #B5BD00; filter: brightness(70%);}
-a:active {color: #737B4C; filter: brightness(110%);}
+a{color: #fff; text-decoration: none; font-weight: normal; 	transition: 0.5s;}
+a:visited {	color: #fff;}
+a:focus { filter: brightness(80%);}
+a:hover { filter: brightness(80%);}
+a:active { filter: brightness(80%);}
 
 @font-face {
 	font-family: chakraPetch;
@@ -199,10 +199,7 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	width: 100%;
 }
 
-#homepageGIF {
-	max-height:500px;
-	object-fit:cover;
-}
+
 
 .contentDoubleLeft {
 	width: 50%;
@@ -228,6 +225,16 @@ a:active {color: #737B4C; filter: brightness(110%);}
 
 .mobileFooter {
 	display: none;
+}
+
+/*Custom styles for random things. Messy, I know. Repeated at bottom of mobile.*/
+#homepageGIF {
+	max-height:500px;
+	object-fit:cover;
+}
+
+#zipperCustom1 {
+	width: 30%;
 }
 
 @media screen and (max-width: 801px) {
@@ -311,10 +318,7 @@ a:active {color: #737B4C; filter: brightness(110%);}
 		padding-left: 0px;
 	}
 	
-	#homepageGIF {
-		max-height:100%;
-		object-fit:cover;
-	}
+
 		
 	.indexHeader {
 		display: none;
@@ -347,5 +351,15 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	
 	.mobileFooter {
 		display: block;
+	}
+	
+	/*Custom styles for random things. Messy, I know. Mobile version!*/
+	#homepageGIF {
+		max-height:100%;
+		object-fit:cover;
+	}
+	
+	#zipperCustom1 {
+	width: 100%;
 	}
 }
