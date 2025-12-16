@@ -1,19 +1,59 @@
 body {
-	margin-top: 0px; 
+	margin-top: 100px; 
 	padding: 0; 
-	background-color: #15110d; 
+	background-color: #0F080C; 
 	margin: auto;
 	font-family: "Arial", Arial, sans-serif; 
-	color: #D9D9D6;
-	max-width: 900px;
+	color: #DDDDDD;
+	max-width: 80%;
 }
 
 hr {
-	width: 88%;
+	width: 100%;
+	height: 3px;
+	background-color: #DDDDDD;
+	border-width:0;
+	margin-bottom: 24px;
+}
+
+h1 { /* Used for chapter titles */
+	font-size: 32px;
+	text-align: left;
+	padding-left: 2ch;
+}
+
+h2 { /* Used for chapter subtitles */
+	font-size: 30px;
+	text-align: left;
+	margin-bottom: 8px;
+}
+
+h3 { /* Used for link titles on the main index. */
+	font-size: 24px;
+	text-align: left;
+	margin-bottom: 0;
+}
+
+p {
+	font-size: 24px; 
+	text-align: justify;
+	line-height: 36px;
+	margin-top: 8px;
+	margin-bottom: 24px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+blockquote {
+	font-size: 24px;
+	line-height: 36px;
+	text-align: justify;
+	margin-left: 8ch;
+	margin-right: 8ch;
 }
 
 img {
-	max-width: 84%;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -22,43 +62,23 @@ img {
 	max-height: 600px;
 }
 
-h1 {
-	font-size: 32px;
-	text-align: center;
-	line-height: 36px;
-}
-
-h2 {
-	font-size: 28px;
-	font-weight: bold;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	margin-left: 4%;
-	margin-right: 4%;	
-}
-
-p {
-	font-size: 24px; 
-	text-align: justify;
-	line-height: 36px;
-	margin-top: 4px;
-	margin-bottom: 24px;
-	margin-left: 4%;
-	margin-right: 4%;
-}
-
-blockquote {
-	font-size: 24px;
-	line-height: 36px;
-	margin-left: 12%;
-	margin-right: 12%;
+textarea {
+	resize: none;
+	width: 88ch;
+	display:block;
+	margin: 0 auto;
+	padding: 8px 4%;
+	background-color: #D9D9D6;
+	color: #27251F;
+	outline: none;
+	border: 2px solid #27251F;
 }
 
 table {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	width: 88%;
+	width: 100%;
 }
 
 th {
@@ -66,34 +86,36 @@ th {
 	line-height: 36px;
 	color: #D9D9D6;
 	text-align: center;
-	width: 50%;
+	width: auto;
+	padding-left: 2ch;
+	padding-right: 2ch;
 }
 
 td {
-	width: 50%;
+	width: auto;
 	line-height: 36px;
 	text-align: left;
 	font-size: 24px; 
 	padding-top: 4px;
 	padding-bottom: 24px;
+	padding-left: 2ch;
+	padding-right: 2ch;
 }
 
 dl {
-	margin-top: 4px;
-	margin-left: 4%;
-	margin-right: 4%;
+	margin: 0;
 }
 
 dt {
-	font-size: 24px; 
 	text-align: justify;	
 }
 
 input[type=text] {
-	width: 76%;
+	width: 100%;
 	display:block;
-	margin: 0 auto;
-	padding: 8px 4%;
+	margin: 0px auto;
+	padding-top: 8px;
+	padding-bottom: 8px;
 	font-size: 24px; 
 	background-color: #D9D9D6;
 	color: #27251F;
@@ -114,337 +136,104 @@ a:focus {color: #B5BD00; filter: brightness(70%);}
 a:hover {color: #B5BD00; filter: brightness(70%);}
 a:active {color: #737B4C; filter: brightness(110%);}
 
-textarea {
-	resize: none;
-	width: 76%;
-	display:block;
-	margin: 0 auto;
-	padding: 8px 4%;
-	background-color: #D9D9D6;
-	color: #27251F;
-	outline: none;
-	border: 2px solid #27251F;
+/*The following styles are for the header of the website. These are used on every page.*/
+.header {
+  content: "";
+  display: flex;
+  clear: both;
+  width: 100%;
+  height: 20vh;
+  padding-top: 3vh;
+  padding-bottom: 1vh;
 }
 
-table.cv {
-	width: 90%;
+.header h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 4vh;
 }
 
-table.cv td {
-	width: initial;
-	text-align: left;
-	vertical-align: top;
-	padding-bottom: 25px;
+.headerInfo {
+	float: left;
 }
 
-ul {
-	font-size: 24px;
-	text-align: justify;	
-	margin-left: 2%;
-	margin-right: 0%;
+.siteLogo {
+	height: 18vh;
 }
 
-button {
-	text-align: center;
+.siteLogo a {
+	display: inline-block;
+	height: 100%;
+}
+
+.siteLogo img{
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	max-width: 100%;
+}
+
+.bookInfo {
+	padding-left: 1%;
+	padding-right: 1%;
 	width: 50%;
-	max-width: 84%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	font-size: 28px;
-	font-weight: bold;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	padding: 4px 32px;
-	border: none;
-	background-color: #6CACE4;
-	color: #15110d;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	height: 18vh;
+	flex-grow: 1;
 }
 
-button:focus {background-color: #307FE2;}
-button:hover {background-color: #B5BD00; filter: brightness(70%);}
-button:active {background-color: #737B4C; filter: brightness(110%);}
+.bookInfo h1 {
+	text-align: left;
+}
 
+.pageNumber {
+	float: right;
+	width: 20%;
+	height: 18vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-grow: 1;
+}
+/*End of header styles*/
 
+/*The following is used for the publication styles. Any transcribed texts should use these styles.*/
 .publicationText {
-	margin-left: 4%;
-	margin-right: 4%;
+	margin-left: 16ch;
+	margin-right: 16ch;
 	font-family: "Times New Roman", Times, serif;
 	text-align: justify;
 }
 
 .publicationText p {
 	font-size: 24px;
-	text-indent: 8%;
+	text-indent: 8ch;
 }
 
-.publicationText h1 {
+.publicationText h1 { /*Used for centered titles*/
 	font-size: 28px;
 	text-align: center;
 	margin-bottom: 16px;
-	margin-left: 4%;
-	margin-right: 4%;
+	margin-left: 0 auto;
+	margin-right: 0 auto;
 }
 
-.publicationText h2 {
+.publicationText h2 { /*Used for justified titles*/
+	font-size: 28px;
+	text-align: justify;
 	margin-bottom: 16px;
+	margin-left: auto;
+	margin-right: auto;
 }
+/*End of publication styles */
 
-.folioContent {
-	padding-bottom: 20px;
-}
-
+/*Start of search Index styles*/
 .folioContentTags {
 	display: none;
-}
-
-
-
-
-
-
-.header {
-	font-size: 100px; 
-	text-align: center;
-}
-
-.header a{
-	text-decoration: none; 
-	color: #D9D9D6;
-}
-
-.index li {
-	font-size: 25px; 
-	margin-left: 12%;
-	margin-right: 12%;
-}	
-
-.index a {
-	text-decoration: none;
-	color: #6CACE4; 
-}
-.index a:visited {color: #307FE2;}
-.index a:focus {color: #B5BD00; filter: brightness(70%);}
-.index a:hover {color: #B5BD00; filter: brightness(70%);}
-.index a:active {color: #737B4C; filter: brightness(110%);}
-
-
-
-
-
-
-
-
-
-.textBox table {
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	width: 800px;
-}
-
-.textBox th {
-	font-size: 35px;
-	line-height: 35px;
-	color: #D9D9D6;
-	text-align: center;
-	width: 400px;
-	height: 40px
-}
-
-.textBox td {
-	width: 400px;
-}
-	
-.art {
-	margin-left: 8%;
-	margin-right: 8%;
-}
-	
-.art h1 {
-	font-size: 30px;
-	text-align: center;
-}
-
-.art img {
-	margin-left: auto;
-	margin-right: auto;
-	width: auto;
-	max-width: 100%;
-	height: auto;
-}
-	
-.publicationDescription {
-	font-size: 25px;
-	margin-left: 5%;
-	margin-right: 5%;
-	line-height: 36px;
-	text-align: justify;
-}
-
-.publicationDescription blockquote {
-	font-family: "Times New Roman", Times, serif; 
-}
-
-.publicationDescription img {
-	margin-left: auto;
-	margin-right: auto;
-	width: auto;
-	max-width: 90%;
-	height: auto;
-}
-
-
-.essayDescription {
-	font-size: 25px;
-	margin-left: 5%;
-	margin-right: 5%;
-	line-height: 36px;
-	text-align: justify;
-}
-
-.essayDescription blockquote {
-	font-family: "Times New Roman", Times, serif; 
-}
-
-.essayDescription img {
-	margin-left: auto;
-	margin-right: auto;
-	width: auto;
-	max-width: 90%;
-	height: auto;
-}
-
-.essayText {
-	font-size: 25px;
-	margin-left: 5%;
-	margin-right: 5%;
-	line-height: 40px;
-	font-family: "Times New Roman", Times, serif; 
-}
-
-.essayText h2 {
-	text-align: center;
-	font-weight: normal;
-	line-height: 50px;
-}
-
-.essayText p {
-	text-indent: 50px;
-	text-align: justify;
-}
-
-.cv {
-	font-size: 25px;
-	margin-left: 5%;
-	margin-right: 5%;
-	line-height: 36px;
-	text-align: justify;
-}
-
-
-
-.FRZYDOOMindex {
-	margin-left: 8%;
-	margin-right: 8%;
-}
-
-.FRZYDOOMindex h1 {
-	font-size: 40px;
-	text-align: center;
-}
-
-.FRZYDOOMindex h2 {
-	font-size: 30px; 
-	text-decoration: none;
-	text-align: left; 
-	margin-left: 6%;
-}
-
-.FRZYDOOMindex p {
-	font-size: 25px; 
-	margin-left: 8%;
-	margin-right: 8%;
-}
-
-.FRZYDOOMindex ul {
-	list-style: none;
-	font-size: 25px; 
-	margin-left: 8%;
-	margin-right: 8%;
-}
-
-.FRZYDOOMindex ol {
-	list-style-position: inside;
-	list-style: square;
-	font-size: 25px; 
-	margin-left: 4%;
-	margin-right: 4%;
-}
-
-
-@media screen and (max-width: 800px) {
-	.header { 
-		font-size: 15vw;
-		line-height: 18vw;
-	}
-	
-	.index {
-		margin-left: 4%;
-		margin-right: 4%;
-	}
-	
-	.index h1 {
-		font-size: 8vw;
-	}
-	
-	.index h2 {
-		font-size: 6vw;
-	}
-	
-	.index p {
-		font-size: 5.5vw;  
-		margin-left: 4vw;
-		margin-right: 4vw;
-	}
-	
-	.index a {
-		line-height: 6vw;
-		font-size: 6vw; 
-		text-indent: 2vw; 
-		margin-left: 0vw;
-	}
-	
-	.textBox {
-		line-height: 8vw;
-	}
-		
-	.textBox h2 {
-		font-size: 8vw;
-	}
-	
-	.textBox p {
-		line-height: 8vw;
-		font-size: 5.5vw;  
-		margin-left: 2vw;
-		margin-right: 2vw;
-	}
-	
-	.textBox table {
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		width: 100%;
-	}
-	
-	.textBox th {
-		font-size: 7vw;
-		line-height: 7vw;
-		height: 100%;
-	}
-	
-	.art h1 {
-		font-size: 5vw;
-		text-align: center;
-	}
 }
