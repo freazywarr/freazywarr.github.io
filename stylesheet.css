@@ -240,7 +240,16 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	display: none;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
+	body {
+		max-width: 90%;
+	}
+	
+	hr {
+		height: 2px;
+		margin-bottom: 20px;
+	}
+	
 	h1 { /* Used for chapter titles */
 		font-size: 30px;
 	}
@@ -317,7 +326,99 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	}
 
 	.publicationText h2 { /*Used for justified titles*/
-	font-size: 24px;
+		font-size: 24px;
+	}
+	/*End of publication styles */
+}
+
+
+@media screen and (max-width: 450px) {
+	body {
+		max-width: 90%;
+	}
+
+	hr {
+		height: 2px;
+		margin-bottom: 16px;
+	}
+	
+	h1 { /* Used for chapter titles */
+		font-size: 24px;
+	}
+
+	h2 { /* Used for chapter subtitles */
+		font-size: 20px;
+	}
+
+	h3 { /* Used for link titles on the main index. */
+		font-size: 16px;
+	}
+	
+	p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
+	blockquote {
+		font-size: 16px;
+		line-height: 20px;
+		margin-left: 2ch;
+		margin-right: 2ch;
+	}
+	
+	/*The following styles are for the header of the website. These are used on every page.*/
+	.header {
+		display: block;
+	}
+	
+	.siteLogo {
+		width: 100%;
+	}
+	
+	.siteLogo a {
+		width: 100%;
+	}
+	
+	.siteLogo img {
+		height: 80px;
+	}
+	
+	.headerInfo {
+		height: auto;
+	}
+	
+	.bookInfo {
+		padding-top: 2vh;
+		padding-bottom: 2vh;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+	}
+	
+	.bookInfo h1 {
+		font-size: 24px;
+		width: 100%;
+		text-align: center;
+	}
+	/*End of header styles*/
+	
+	/*The following is used for the publication styles. Any transcribed texts should use these styles.*/
+	.publicationText {
+		margin-left: 2ch;
+		margin-right: 2ch;
+	}
+
+	.publicationText p {
+		font-size: 16px;
+		text-indent: 2ch;
+	}
+
+	.publicationText h1 { /*Used for centered titles*/
+		font-size: 20px;
+	}
+
+	.publicationText h2 { /*Used for justified titles*/
+		font-size: 20px;
 	}
 	/*End of publication styles */
 }
