@@ -1,0 +1,444 @@
+body {
+	margin-top: 100px; 
+	padding: 0; 
+	background-color: #010800; 
+	margin: auto;
+	font-family: "Arial", Arial, sans-serif; 
+	color: #FFFFFF;
+	max-width: 80%;
+}
+
+hr {
+	width: 100%;
+	height: 3px;
+	background-color: #BD9B3D;
+	border-width:2px;
+	border-color: #732B00;
+	margin-bottom: 24px;
+}
+
+h1 { /* Used for chapter titles */
+	font-size: 32px;
+	text-align: center;
+	padding-left: 2ch;
+}
+
+h2 { /* Used for chapter subtitles */
+	font-size: 30px;
+	text-align: left;
+	margin-bottom: 8px;
+}
+
+h3 { /* Used for link titles on the main index. */
+	font-size: 24px;
+	text-align: left;
+	margin-bottom: 0;
+}
+
+p {
+	font-size: 24px; 
+	text-align: justify;
+	line-height: 36px;
+	margin-top: 8px;
+	margin-bottom: 24px;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+blockquote {
+	font-size: 24px;
+	line-height: 36px;
+	text-align: justify;
+	margin-left: 8ch;
+	margin-right: 8ch;
+}
+
+img {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 4px;
+	margin-bottom: 20px;
+	max-height: 600px;
+}
+
+textarea {
+	resize: none;
+	width: 88ch;
+	display:block;
+	margin: 0 auto;
+	padding: 8px 4%;
+	background-color: #D9D9D6;
+	color: #27251F;
+	outline: none;
+	border: 2px solid #27251F;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	width: 100%;
+}
+
+th {
+	font-size: 28px;
+	line-height: 36px;
+	color: #D9D9D6;
+	text-align: center;
+	width: auto;
+	padding-left: 2ch;
+	padding-right: 2ch;
+}
+
+td {
+	width: auto;
+	line-height: 36px;
+	text-align: left;
+	font-size: 24px; 
+	padding-top: 4px;
+	padding-bottom: 24px;
+	padding-left: 2ch;
+	padding-right: 2ch;
+}
+
+dl {
+	margin: 0;
+}
+
+dt {
+	text-align: justify;	
+}
+
+input[type=text] {
+	width: 100%;
+	display:block;
+	margin: 0px auto;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 24px; 
+	background-color: #D9D9D6;
+	color: #27251F;
+	outline: none;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	border: 2px solid #27251F;
+}
+
+input[type=text]:focus {
+	background-color: #B5BD00;
+	border: 2px solid #737B4C;
+}
+
+a{color: #6CACE4; text-decoration: none; font-weight: normal;}
+a:visited {color: #307FE2;}
+a:focus {color: #B5BD00; filter: brightness(70%);}
+a:hover {color: #B5BD00; filter: brightness(70%);}
+a:active {color: #737B4C; filter: brightness(110%);}
+
+/*The following styles are for the header of the website. These are used on every page.*/
+.header {
+  content: "";
+  display: flex;
+  clear: both;
+  width: 100%;
+  height: 20vh;
+  padding-top: 3vh;
+  padding-bottom: 1vh;
+}
+
+.header h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 4vh;
+}
+
+.headerInfo {
+	float: left;
+}
+
+.siteLogo {
+	height: 18vh;
+}
+
+.siteLogo a {
+	display: inline-block;
+	height: 100%;
+}
+
+.siteLogo img{
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	max-width: 100%;
+}
+
+.contentDouble {
+	width: 100%;
+	overflow: auto;
+	display: table;
+	padding-bottom: 20px;
+}
+
+.contentDouble img {
+	width: 100%;
+}
+
+
+
+.contentDoubleLeft {
+	width: 50%;
+	padding-right: 2%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.contentDoubleRight {
+	width: 50%;
+	padding-left: 2%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.bookInfo {
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 50%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	height: 18vh;
+	flex-grow: 1;
+}
+
+.bookInfo h1 {
+	text-align: left;
+}
+
+.pageNumber {
+	float: right;
+	width: 20%;
+	height: 18vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-grow: 1;
+}
+/*End of header styles*/
+
+/*The following is used for the publication styles. Any transcribed texts should use these styles.*/
+.publicationText {
+	margin-left: 16ch;
+	margin-right: 16ch;
+	font-family: "Times New Roman", Times, serif;
+	text-align: justify;
+}
+
+.publicationText p {
+	font-size: 24px;
+	text-indent: 8ch;
+}
+
+.publicationText h1 { /*Used for centered titles*/
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 16px;
+	margin-left: 0 auto;
+	margin-right: 0 auto;
+	padding-left: 0;
+}
+
+.publicationText h2 { /*Used for justified titles*/
+	font-size: 28px;
+	text-align: justify;
+	margin-bottom: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0;
+}
+/*End of publication styles */
+
+/*Start of search Index styles*/
+.folioContentTags {
+	display: none;
+}
+
+@media screen and (max-width: 900px) {
+	body {
+		max-width: 90%;
+	}
+	
+	hr {
+		height: 2px;
+		margin-bottom: 20px;
+	}
+	
+	h1 { /* Used for chapter titles */
+		font-size: 30px;
+	}
+
+	h2 { /* Used for chapter subtitles */
+		font-size: 24px;
+	}
+
+	h3 { /* Used for link titles on the main index. */
+		font-size: 20px;
+	}
+	
+	p {
+		font-size: 20px;
+		line-height: 28px;
+	}
+	
+	blockquote {
+		font-size: 20px;
+		line-height: 24px;
+		margin-left: 3ch;
+		margin-right: 3ch;
+	}
+	
+	/*The following styles are for the header of the website. These are used on every page.*/
+	.header {
+		display: block;
+	}
+	
+	.siteLogo {
+		width: 100%;
+	}
+	
+	.siteLogo a {
+		width: 100%;
+	}
+	
+	.siteLogo img {
+		height: 120px;
+	}
+	
+	.headerInfo {
+		height: auto;
+	}
+	
+	.bookInfo {
+		padding-top: 2vh;
+		padding-bottom: 2vh;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+	}
+	
+	.bookInfo h1 {
+		font-size: 32px;
+		width: 100%;
+		text-align: center;
+	}
+	/*End of header styles*/
+	
+	.contentDoubleLeft {
+		width: 100%;
+		float: left;
+		padding-right: 0px;
+		padding-bottom: 20px;
+	}
+	
+	.contentDoubleRight {
+		width: 100%;
+		float: left;
+		padding-left: 0px;
+	}
+}
+
+
+@media screen and (max-width: 450px) {
+	body {
+		max-width: 90%;
+	}
+
+	hr {
+		height: 2px;
+		margin-bottom: 16px;
+	}
+	
+	h1 { /* Used for chapter titles */
+		font-size: 24px;
+	}
+
+	h2 { /* Used for chapter subtitles */
+		font-size: 20px;
+	}
+
+	h3 { /* Used for link titles on the main index. */
+		font-size: 16px;
+	}
+	
+	p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	
+	blockquote {
+		font-size: 16px;
+		line-height: 20px;
+		margin-left: 2ch;
+		margin-right: 2ch;
+	}
+	
+	/*The following styles are for the header of the website. These are used on every page.*/
+	.header {
+		display: block;
+	}
+	
+	.siteLogo {
+		width: 100%;
+	}
+	
+	.siteLogo a {
+		width: 100%;
+	}
+	
+	.siteLogo img {
+		height: 80px;
+	}
+	
+	.headerInfo {
+		height: auto;
+	}
+	
+	.bookInfo {
+		padding-top: 2vh;
+		padding-bottom: 2vh;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+	}
+	
+	.bookInfo h1 {
+		font-size: 24px;
+		width: 100%;
+		text-align: center;
+	}
+	/*End of header styles*/
+	
+	/*The following is used for the publication styles. Any transcribed texts should use these styles.*/
+	.publicationText {
+		margin-left: 2ch;
+		margin-right: 2ch;
+	}
+
+	.publicationText p {
+		font-size: 16px;
+		text-indent: 2ch;
+	}
+
+	.publicationText h1 { /*Used for centered titles*/
+		font-size: 20px;
+	}
+
+	.publicationText h2 { /*Used for justified titles*/
+		font-size: 20px;
+	}
+	/*End of publication styles */
+}

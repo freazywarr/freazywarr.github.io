@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Abslom Daak: Dalek Killer! - A fan game by Freazy Warr</title>
+	
+	<meta name="description" content="Play as Abslom Daak: Dalek Killer! In three fan games all packaged together with one launcher.">
+	<meta name="keywords" content="abslom, daak, game, doom, wad, dalek, killer, doctor who, abslom daak, dalek killer, fan game, fanart, doom retro, retro doom, retro">
+	<meta name="author" content="Freazy Warr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="daak.css">
+	<meta charset="utf-8"/>
+	
+</head>
+<body>
+	
+	<br>
+	<div class="contentDouble">
+		<div class="contentDoubleLeft" style="width:50%">
+			<a href="daak.html"><img src="daak/logo.png"></a>
+		</div>
+		
+		<div class="contentDoubleRight" style="width:50%;">
+			<a href="daak/daak.zip"><img src="daak/download.png"></a>
+		</div>
+	</div>
+	
+	<hr>
+	
+	<h1>DALEKS! CARNAGE! DEATH! DESTRUCTION! and <i><u>DAAK!</u></i></h1>
+	
+	<hr>
+	<div class="contentDouble">
+		<div class="contentDoubleLeft" style="width:60%">
+			<p><b><i>Abslom Daak: Trinity</i></b> is a fan project running on the Doom Engine using the Doom Retro source port. Currently in development, it will be composed of three games, all playable under one launcher. The first game is ready to play now.</p>
+			<a href="prologue.html"><img src="daak/wad1.png"></a>
+			<img src="daak/wad2.png">
+			<img src="daak/wad3.png">
+		</div>
+		
+		<div class="contentDoubleRight" style="width:40%;">
+			<a href="daak/prologue.html"><img src="daak/prologue-bigbox.png" style="object-fit:contain;"></a>
+		</div>
+	</div>
+	
+	<hr>
+	<h1>- - Incoming Transmission - -</h1>
+	<hr>
+	<h2><i>Abslom Daak: Prologue</i>, available now!</h2>
+		<div class="contentDouble">
+		<div class="contentDoubleLeft" style="width:40%;">
+			<img src="daak/transmission01.png" style="object-fit:contain;">
+		</div>
+		<div class="contentDoubleRight" style="width:60%">
+			<p>The first game in the <i>Trinity</i> is ready to download. The Daleks are constructing a time corridor into their own history in order to turn their defeats into victories. They dare tamper with the forces of creation, and you must dare to stop them.</p>
+			<p>This game is a single-map demonstration of things to come in the <i>Trinity</i>. It serves as a narrative prologue and an introduction to some of the gameplay mechanics.</p>
+			<a href="daak/daak.zip"><img src="daak/download.png"></a>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	<hr>
+	<h1>Furthermore</h1>
+	<p>This project was made by Freazy Warr. You can visit my site <a href="https://www.freazywarr.com">here</a>. Alternatively, you can find me on <a href="https://www.doomworld.com/profile/34863-freazywarr/">Doomworld</a>, <a href="https://www.tiktok.com/@freazywarr">TikTok</a>, <a href="https://www.youtube.com/@freazywarr">YouTube</a>, <a href="https://www.reddit.com/user/freazywarr/">Reddit</a>, and <a href="https://www.instagram.com/freazywarr/">Instagram</a>.
+	<hr>
+	
+
+</body>
+<script>
+//The following script is short and messy. All it does is update my current age.
+var currentYear, currentMonth, currentDate, birthYear, birthMonth, birthDate, freazyAge;
+const date = new Date()
+var currentYear = date.getFullYear();
+var currentMonth = date.getMonth();
+var currentDate = date.getDate();
+var birthYear = 2000;
+var birthMonth = 1; //Set to '1' for February.
+var birthDate = 14;
+
+if (currentMonth > birthMonth) { //It is after February.
+	var freazyAge = currentYear - birthYear;
+} else if (currentMonth < birthMonth) { //It is before February.
+	var freazyAge = currentYear - birthYear - 1;
+} else {//It is February.
+	if (currentDate >= birthDate) { //It is my birthday or beyond.
+		var freazyAge = currentYear - birthYear;
+	} else { //It is just before my birthday.
+		var freazyAge = currentYear - birthYear - 1;
+	}
+}
+document.getElementById("freazyAge").innerHTML = freazyAge;
+
+//The following is used for the search function.
+//It was written ages ago and I don't remember how it works.
+var activeGroup, activeTags;
+activeGroup = [""];
+activeTags = [""];
+
+function tagSearch() {
+	var rawInput, userInput, folioContent, hasAllTags, folioContentView, folioContentLength, countTags, count, tagName, biggerOrSmaller;
+	rawInput = document.getElementById("tagSearch").value.toUpperCase(); //Capitalises user input.
+	rawInput = rawInput.split(" ").join(""); //Removes spaces from the user input.
+	userInput = rawInput.split(",");
+	if (userInput.length > 0) {
+		userInput = userInput.filter(e => e !== ""); //I have no idea.
+	}
+	activeTags = userInput;
+
+	folioContent = document.getElementsByClassName("folioContent");
+	for (count = 0; count < folioContent.length; count++) {
+		//console.log(folioContent);
+		hasAllTags = "True"
+		for (countTags = 0; countTags < userInput.length; countTags++){
+			tagName = folioContent[count].getElementsByClassName("folioContentTags")[0].innerHTML;
+			//console.log(tagName);
+			if (tagName.toUpperCase().indexOf(userInput[countTags]) > -1 && hasAllTags == "True") {
+				hasAllTags = "True"
+			} else {
+				hasAllTags = "False"
+			}
+		}
+		if (hasAllTags == "True") {
+			folioContent[count].style.display = "";	
+		} else {
+			folioContent[count].style.display = "none";
+		}
+	}
+	
+	//The following was added recently. I want the content to be grouped on the sites index. But the index titles need to vanish when there is no content to display.
+	folioGroup = document.getElementsByClassName("folioGroup");
+	const groupContent = [""]
+	for (count = 0; count < folioGroup.length; count++) {
+		let groupContent = folioGroup[count].querySelectorAll('.folioContent');
+
+		hasContent = "True";
+		//Checking child divs of group.
+		for (countGroup = 0; countGroup < groupContent.length; countGroup++) {
+			
+			if (groupContent[countGroup].style.display == ""){
+				hasContent = "True";
+				break;
+			} else {
+				hasContent = "False";
+			}
+		}
+		console.log(hasContent);
+		
+		if (hasContent == "True"){
+			folioGroup[count].style.display = "";
+		} else {
+			folioGroup[count].style.display = "none";
+		}
+	}
+}
+</script>
+</html> 
