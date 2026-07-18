@@ -20,7 +20,6 @@ hr {
 h1 { /* Used for chapter titles */
 	font-size: 32px;
 	text-align: center;
-	padding-left: 2ch;
 }
 
 h2 { /* Used for chapter subtitles */
@@ -267,6 +266,19 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	display: none;
 }
 
+/*Specific styles for content doubles.*/
+#contentDouble50 {
+	width: 50%;
+} 
+
+#contentDouble60 {
+	width: 60%;
+} 
+
+#contentDouble40 {
+	width: 40%;
+} 
+
 @media screen and (max-width: 900px) {
 	body {
 		max-width: 90%;
@@ -300,6 +312,11 @@ a:active {color: #737B4C; filter: brightness(110%);}
 		margin-left: 3ch;
 		margin-right: 3ch;
 	}
+	
+	img {
+		max-width: 90%;
+	}
+
 	
 	/*The following styles are for the header of the website. These are used on every page.*/
 	.header {
@@ -352,9 +369,9 @@ a:active {color: #737B4C; filter: brightness(110%);}
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
 	body {
-		max-width: 90%;
+		max-width: 85%;
 	}
 
 	hr {
@@ -384,6 +401,10 @@ a:active {color: #737B4C; filter: brightness(110%);}
 		line-height: 20px;
 		margin-left: 2ch;
 		margin-right: 2ch;
+	}
+	
+	img {
+		max-width: 80%;
 	}
 	
 	/*The following styles are for the header of the website. These are used on every page.*/
@@ -422,23 +443,16 @@ a:active {color: #737B4C; filter: brightness(110%);}
 	}
 	/*End of header styles*/
 	
-	/*The following is used for the publication styles. Any transcribed texts should use these styles.*/
-	.publicationText {
-		margin-left: 2ch;
-		margin-right: 2ch;
+	.contentDoubleLeft {
+		width: 100%;
+		float: left;
+		padding-right: 0px;
+		padding-bottom: 20px;
 	}
-
-	.publicationText p {
-		font-size: 16px;
-		text-indent: 2ch;
+	
+	.contentDoubleRight {
+		width: 100%;
+		float: left;
+		padding-left: 0px;
 	}
-
-	.publicationText h1 { /*Used for centered titles*/
-		font-size: 20px;
-	}
-
-	.publicationText h2 { /*Used for justified titles*/
-		font-size: 20px;
-	}
-	/*End of publication styles */
 }
