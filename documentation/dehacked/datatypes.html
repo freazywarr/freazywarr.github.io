@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DeHackEd, Data Types - Freazy Warr</title>
+	
+	<meta name="description" content="A simple tutorial with examples on how to use the Strife Dialogue system within UDMF Doom maps.">
+	<meta name="keywords" content="doom 2, doom, wad, udmf, zdoom, uzdoom, gzdoom, tutorial, strife, dialogue, dialog">
+	<meta name="author" content="Freazy Warr">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+	<meta charset="utf-8"/>
+	
+</head>
+<body>
+	<div class="header">
+		<div class="headerInfo siteLogo">
+			<a href="../../index.html"><img src="../../index-logo.png"></a>
+		</div>
+		<div class="headerInfo bookInfo">
+			<h1>Doom WAD Tutorials</h1>
+		</div>
+	</div>
+	
+	<hr>
+	
+	<nav class="publicationNavigation">
+		<a class="publicationNavPrev" href="understandingblocks.html">Previous Page</a>
+		<a class="publicationNavIndex" href="../dialogue.html">Index</a>
+		<a class="publicationNavNext" href="tradingmechanics.html">Next Page</a>
+	</nav>
+	
+	<hr>
+	<h1>3. PLAYER DIALOGUE CHOICES</h1>
+	<p>So far we have created a single page of dialogue. Let’s give the player an option to respond to this dialogue by adding the following code to the <i>page</i> block.</p>
+
+<textarea rows=5 cols=100 readonly>
+Choice
+{
+	Text = "It hurts when I do this.";
+	NextPage = "Diagnosis1";
+}</textarea>
+
+	<img src="tut3_1.png">
+	<p>This is a <i>choice</i> block, and it exists within <i>page</i> blocks. They allow us to give the player different responses within each page.</p>
+	<p>In our example, the player will be given the choice to respond with ‘It hurts when I do this.’ which will lead to another <i>page</i> block within the <i>conversation</i> block that has the ‘<b>PageName</b>’ value of “Diagnosis1”.</p>
+	<p>Of course, we still need to create this new <i>page</i> block. Let’s add the following code within our <i>conversation</i> block.</p>
+
+<textarea rows=6 cols=100 readonly>
+Page
+{
+	Name = "Dr Archvile (Annoyed)";
+	PageName = "Diagnosis1";
+	Dialog = "Then don't do that!";
+}</textarea>
+
+	<p>When we first interact with our Archvile, the game engine will always call the first <i>page</i> within a <i>conversation</i> block. As such, we need to make sure all later pages in a conversation come afterwards. It should look a bit like this.</p>
+	<img src="tut3_2.png">
+
+	<p>Let’s save our map and see what changes we have made.</p>
+	<img src="tut3_3.png">
+	<p>As you can see, there is a new choice that the player can make. Clicking on that option reveals the new page we have made.</p>
+	<img src="tut3_4.png">
+
+	<p>If you didn’t notice, I changed the ‘<b>Name</b>’ of Dr Archvile in this new <i>page</i> block to add the word ‘Annoyed’. As annoying as it will be for us to have to define the name within every <i>page</i> block, it gives us more creative freedom.
+
+	<p>We should add a <i>choice</i> block within our new <i>page</i> block so that our player can return to the first page.</p>
+
+<textarea rows=5 cols=100 readonly>
+Choice
+{
+	Text = "Wait! I still need your help.";
+	NextPage = "Hello";
+}</textarea>
+
+	<p>Which, within the new <i>page</i> block, should look like this.</p>
+	<img src="tut3_5.png">
+	
+	<p>Let’s save and test this once more.</p>
+	<img src="tut3_6.png">
+	
+	<p>We have now added a player choice to both of our <i>page</i> blocks within this conversation. Notice how we had to define the ‘<b>NextPage</b>’ within this choice with the ‘<b>PageName</b>’ of the page we want to our new choice to go to.</p>
+	<p>We also didn’t define our ‘<b>Goodbye</b>’ message in this new <i>page</i> block, meaning we have been given one of the default messages instead.</p>
+	<p>We can keep adding <i>pages</i> and <i>choices</i> to this conversation to our hearts content. It is a pity then that there is still so much more to learn. Next up, let’s add some <a href="tradingmechanics.html">TRADING MECHANICS</a>.</p>
+	
+	
+	
+	
+
+	<br>
+	<hr>
+	<nav class="publicationNavigation">
+		<a class="publicationNavPrev" href="understandingblocks.html">Previous Page</a>
+		<a class="publicationNavIndex" href="../dialogue.html">Index</a>
+		<a class="publicationNavNext" href="tradingmechanics.html">Next Page</a>
+	</nav>
+	</nav>
+	<hr>
+	<br>
+</body>
+</html>
