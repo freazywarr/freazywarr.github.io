@@ -3,8 +3,8 @@
 <head>
 	<title>DeHackEd, Data Types - Freazy Warr</title>
 	
-	<meta name="description" content="A simple tutorial with examples on how to use the Strife Dialogue system within UDMF Doom maps.">
-	<meta name="keywords" content="doom 2, doom, wad, udmf, zdoom, uzdoom, gzdoom, tutorial, strife, dialogue, dialog">
+	<meta name="description" content="Everything I (and perhaps you!) need to know about writing in DeHackEd for Doom.">
+	<meta name="keywords" content="doom 2, doom, wad, codepointers, boom, mbf, mbf21, documentation, data types, integers, int, fixed point number, fixed point, fixed, string, str">
 	<meta name="author" content="Freazy Warr">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../../stylesheet.css">
@@ -17,84 +17,86 @@
 			<a href="../../index.html"><img src="../../index-logo.png"></a>
 		</div>
 		<div class="headerInfo bookInfo">
-			<h1>Doom WAD Tutorials</h1>
+			<h1>DeHackEd Documentation</h1>
 		</div>
 	</div>
 	
 	<hr>
 	
 	<nav class="publicationNavigation">
-		<a class="publicationNavPrev" href="understandingblocks.html">Previous Page</a>
-		<a class="publicationNavIndex" href="../dialogue.html">Index</a>
-		<a class="publicationNavNext" href="tradingmechanics.html">Next Page</a>
+		<a class="publicationNavPrev" href="gettingstarted.html">Previous Page</a>
+		<a class="publicationNavIndex" href="../dehacked.html">Index</a>
+		<a class="publicationNavNext" href="properties.html">Next Page</a>
 	</nav>
 	
 	<hr>
-	<h1>3. PLAYER DIALOGUE CHOICES</h1>
-	<p>So far we have created a single page of dialogue. Let’s give the player an option to respond to this dialogue by adding the following code to the <i>page</i> block.</p>
-
-<textarea rows=5 cols=100 readonly>
-Choice
-{
-	Text = "It hurts when I do this.";
-	NextPage = "Diagnosis1";
-}</textarea>
-
-	<img src="tut3_1.png">
-	<p>This is a <i>choice</i> block, and it exists within <i>page</i> blocks. They allow us to give the player different responses within each page.</p>
-	<p>In our example, the player will be given the choice to respond with ‘It hurts when I do this.’ which will lead to another <i>page</i> block within the <i>conversation</i> block that has the ‘<b>PageName</b>’ value of “Diagnosis1”.</p>
-	<p>Of course, we still need to create this new <i>page</i> block. Let’s add the following code within our <i>conversation</i> block.</p>
-
-<textarea rows=6 cols=100 readonly>
-Page
-{
-	Name = "Dr Archvile (Annoyed)";
-	PageName = "Diagnosis1";
-	Dialog = "Then don't do that!";
-}</textarea>
-
-	<p>When we first interact with our Archvile, the game engine will always call the first <i>page</i> within a <i>conversation</i> block. As such, we need to make sure all later pages in a conversation come afterwards. It should look a bit like this.</p>
-	<img src="tut3_2.png">
-
-	<p>Let’s save our map and see what changes we have made.</p>
-	<img src="tut3_3.png">
-	<p>As you can see, there is a new choice that the player can make. Clicking on that option reveals the new page we have made.</p>
-	<img src="tut3_4.png">
-
-	<p>If you didn’t notice, I changed the ‘<b>Name</b>’ of Dr Archvile in this new <i>page</i> block to add the word ‘Annoyed’. As annoying as it will be for us to have to define the name within every <i>page</i> block, it gives us more creative freedom.
-
-	<p>We should add a <i>choice</i> block within our new <i>page</i> block so that our player can return to the first page.</p>
-
-<textarea rows=5 cols=100 readonly>
-Choice
-{
-	Text = "Wait! I still need your help.";
-	NextPage = "Hello";
-}</textarea>
-
-	<p>Which, within the new <i>page</i> block, should look like this.</p>
-	<img src="tut3_5.png">
+	<h1>Data Types</h1>
+	<p>There are three data types you will encounter when working in DeHackEd. Strings (str), Integers (int), Unsigned Integers (uint), and Fixed-Point Numbers (fixed). Strings are for text, such as when defining a name or cheat code. Integers are for positive and negative whole numbers, such as ID's or health. Unsigned integers are only 0 and positive whole numbers, such as DeHackEd numbers or thing states. Fixed-point numbers are for decimals, such as pitch or angle.</p>
 	
-	<p>Let’s save and test this once more.</p>
-	<img src="tut3_6.png">
+	<p>The key difference between integers and fixed-point numbers is that a fixed-point number is a representation of a fractional number as an integer. This is done by multiplying the decimal value by a known multiplication factor. For example, if we have a known multiplication factor of 100, then the decimal of 3.14 would have a fixed point representation of 314.</p>
 	
-	<p>We have now added a player choice to both of our <i>page</i> blocks within this conversation. Notice how we had to define the ‘<b>NextPage</b>’ within this choice with the ‘<b>PageName</b>’ of the page we want to our new choice to go to.</p>
-	<p>We also didn’t define our ‘<b>Goodbye</b>’ message in this new <i>page</i> block, meaning we have been given one of the default messages instead.</p>
-	<p>We can keep adding <i>pages</i> and <i>choices</i> to this conversation to our hearts content. It is a pity then that there is still so much more to learn. Next up, let’s add some <a href="tradingmechanics.html">TRADING MECHANICS</a>.</p>
-	
-	
-	
-	
+	<p>Doom uses a fixed point number system as a means of efficiency. Internally, fixed point numbers are stored as a 32 bit integer in 16.16 format. The first 16 digits define the integer, whilst the latter 16 digits are the decimal stored as a fraction. In binary, each digit is 2<sup><i>n</i></sup>; where the rightmost digit is 2<sup>0</sup> and the 17<sup>th</sup> digit, where our integer now resides, is 2<sup>16</sup>. Therefore, if we want to convert any number into a fixed-point number for DeHackEd, we need to multiply it by 2<sup>16</sup>, or 65536.</p>
 
+	<p>For example, the number 1.5 would become 98304.</p>
+
+	<p>Some decimal numbers are impossible to store as fixed-point values. 0.1 becomes 6553.6, but our fixed-point value needs to be a whole number. Therefore, the closest numbers to 0.1 that can be represented as fixed-point values are 0.0999908447265625 and 0.100006103515625; or 6553 or 6554 respectively.</p>
+	
+	<p>The following calculator can be used to convert your decimal numbers to fixed-point ones, and vice versa.</p>
+	
+	<h1>Decimal to Fixed-Point Calculator</h1>
+	<p style="text-align:left;"><input type="text" id="calcFixedPoint" onkeyup="calcFixedPoint()" placeholder="Try 3.1415" title="Try 3.1415" style="width: 40%; display: inline;"> Fixed-Point Number: <span onclick="copyFixedPoint()" id="fixedPoint">0000</span><span id="fixedPointExtra"></span></p>
+	<p style="text-align:left;"><input type="text" id="calcDecimal" onkeyup="calcDecimal()" placeholder="Try 98304" title="Try 98304" style="width: 40%; display: inline;"> Decimal Number: <span onclick="copyDecimal()" id="decimal">0.0</span></p>
 	<br>
 	<hr>
 	<nav class="publicationNavigation">
-		<a class="publicationNavPrev" href="understandingblocks.html">Previous Page</a>
-		<a class="publicationNavIndex" href="../dialogue.html">Index</a>
-		<a class="publicationNavNext" href="tradingmechanics.html">Next Page</a>
+		<a class="publicationNavPrev" href="gettingstarted.html">Previous Page</a>
+		<a class="publicationNavIndex" href="../dehacked.html">Index</a>
+		<a class="publicationNavNext" href="properties.html">Next Page</a>
 	</nav>
 	</nav>
 	<hr>
 	<br>
 </body>
+<script>
+function calcFixedPoint() {
+	var rawInput, userInput, fixedPoint, fixedPointArray
+	rawInput = document.getElementById("calcFixedPoint").value.toUpperCase()
+	userInput = rawInput.replace(/[^0-9.]/g, "");
+	document.getElementById("calcFixedPoint").value = userInput;
+	
+	fixedPoint = userInput * 65536
+	fixedPoint = fixedPoint.toString();
+	fixedPointArray = fixedPoint.split(".");
+	
+	document.getElementById("fixedPoint").innerHTML = fixedPointArray[0];
+	if (fixedPointArray[1] > 0) {
+		document.getElementById("fixedPointExtra").innerHTML = " (rounded from " + fixedPoint + ")";
+	} else {
+		document.getElementById("fixedPointExtra").innerHTML = "";
+	}
+}
+
+function calcDecimal() {
+	var rawInput, userInput, decimal
+	rawInput = document.getElementById("calcDecimal").value.toUpperCase()
+	userInput = rawInput.replace(/[^0-9]/g, "");
+	document.getElementById("calcDecimal").value = userInput;
+	
+	decimal = userInput / 65536
+	decimal = decimal.toString();
+	
+	document.getElementById("decimal").innerHTML = decimal;
+}
+
+
+function copyFixedPoint() {
+  var copyText = document.getElementById("fixedPoint").innerText;
+  navigator.clipboard.writeText(copyText);
+} 
+
+function copyDecimal() {
+  var copyText = document.getElementById("decimal").innerText;
+  navigator.clipboard.writeText(copyText);
+} 
+</script>
 </html>
